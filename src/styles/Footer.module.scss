@@ -1,0 +1,36 @@
+.footer{
+    padding: 1rem;
+    background: var(--color6);
+    user-select: none;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color2);
+
+    p{
+        font-size: 12px;
+        font-weight: 500;
+
+        a{
+            color: var(--color4);
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
+
+    .footer{
+        margin: 0 2rem 8rem;
+        border-radius: 1rem;
+    }
+    
+    .copyright{
+        flex-direction: column;
+        line-height: 1.8rem;
+    }
+}

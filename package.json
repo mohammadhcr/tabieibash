@@ -1,6 +1,6 @@
 {
-  "name": "esmnadare",
-  "version": "0.1.0",
+  "name": "Tabiei Bash",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -9,17 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.12.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.48.1",
+    "@tailwindcss/postcss": "^4.0.6",
+    "next": "15.1.7",
+    "postcss": "^8.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-icons": "^5.4.0",
+    "sass": "^1.84.0",
+    "tailwindcss": "^4.0.6"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
+    "prettier": "^3.5.1",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "typescript": "^5"
   }
 }

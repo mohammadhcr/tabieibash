@@ -1,0 +1,209 @@
+.lForm{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    background: var(--color5);
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    img{
+        width: 64px;
+        height: 64px;
+    }
+
+    h1{
+        cursor: default;
+        font-size: 36px;
+        color: var(--color1);
+        user-select: none;
+        font-weight: 800;
+    }
+
+    p{
+        cursor: default;
+        font-size: 16px;
+        color: var(--color2);
+        user-select: none;
+        font-weight: 500;
+    }
+}
+
+.login{
+    background: var(--color5);
+    width: 480px;
+    height: auto;
+    padding: 2.5rem;
+    border-radius: 1rem;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 0;
+
+    .input{
+        display: flex;
+        flex-direction: column;
+        margin: 14px 0;
+
+        .placeholder{
+            font-size: 1rem;
+            color: var(--color2);
+            padding-bottom: 0.5rem;
+            user-select: none;
+            font-weight: 400;
+        }
+
+        div{
+            padding: 0 8px;
+            height: 44px;
+            display: flex;
+            border: 2px solid var(--color6);
+            background: var(--color6);
+            border-radius: 0.7rem;
+            font-size: 1.2rem;
+            color: var(--color1);
+            align-items: center;
+
+            &:hover{
+                border: 2px solid var(--color7);
+            }
+
+            .bxlp{
+                cursor: pointer;
+                font-size: 32px;
+                padding: 4px;
+                border-radius: 10px;
+                color: var(--color2);
+
+                &:hover{
+                    background: var(--color7);
+                }
+            }
+
+            .bxlpActive{
+                color: var(--color1);
+            }
+
+            input{
+                font-size: 20px;
+                padding: 0 10px;
+                direction: ltr;
+                width: 100%;
+                outline: none;
+                border: none;
+                color: var(--color1);
+                background: var(--color6);
+            }
+        }
+    }
+}
+
+.errMsg{
+    font-size: 12px;
+    height: 12px;
+    user-select: none;
+    color: #ff3232;
+    padding-top: 0.5rem;
+    font-weight: 400;
+}
+
+.submit button{
+    width: 100%;
+    height: 56px;
+    margin: 12px 0 0;
+    font-size: 1.2rem;
+    background: var(--color8);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+
+    &:hover{
+        background: var(--color10);
+    }
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color7);
+    gap: 6px;
+    margin: 26px;
+    user-select: none;
+
+    hr{
+        width: 128px;
+        color: var(--color6);
+    }
+}
+
+.options{
+    text-align: center;
+    user-select: none;
+    margin: 1.8rem 1rem;
+
+
+    p{
+        color: var(--color2);
+        font-size: 0.9rem;
+    }
+    
+    a{
+        color: var(--color4);
+        font-size: 1rem;
+    }
+}
+
+.socialLoginButtons{
+    display: flex;
+    flex-direction: column;
+}
+
+.socialLoginButton{
+    width: 300px;
+    font-weight: 400;
+    margin: auto;
+    margin-bottom: 1rem;
+    height: 46px;
+    font-size: 16px;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    background: var(--color6);
+    color: var(--color1);
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    .bxl{
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 120px) and (max-width: 480px){
+
+    .login{
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
+}
