@@ -1,6 +1,6 @@
 export {}
 
-export type Roles = "admin" | "member"
+export type Roles = "admin" | "member" | null
 
 declare global {
     interface CustomSessionClaims {

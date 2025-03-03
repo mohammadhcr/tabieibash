@@ -14,8 +14,8 @@ export default clerkMiddleware(async (auth, req) => {
   if (isAuthPage(req) && authPromise.userId) {
     return NextResponse.redirect(new URL('/profile', req.url))
   }
-
-  if (isAdminRoute(req) && (await auth()).sessionClaims?.metadata?.role !== "admin") {
+  // @ts-expect-error any
+  if (isAdminRoute(req) && authPromise.sessionClaims?.metadata?.role !== "admin") {
     return NextResponse.redirect(new URL('/login', req.url))
   }
 })
