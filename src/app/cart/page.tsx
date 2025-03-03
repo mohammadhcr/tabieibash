@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { GoDotFill } from "react-icons/go";
 import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { revalidateTag } from 'next/cache';
+import { Suspense } from 'react';
+import Loading from '../loading';
 
 export const metadata: Metadata = {
   title: "سبد خرید | طبیعی باش",
@@ -67,6 +69,7 @@ const Cart = async () => {
     const {plusBtn, minusBtn, clearBtn, cart, cartTitle, cartPrice, checkout, emptyCart, checkoutBTN, clearBTN, fPrice, quantityControl, dot, info, BTNs, emptyIcon, cartPhoto} = styles;
 
     return (
+        <Suspense fallback={<Loading />}>
         <div className='userWrapper'>
             {cartItems?.length ? cartItems.map((item: Item) =>
                 <div className={cart} key={item.id}>
@@ -115,6 +118,7 @@ const Cart = async () => {
                 }
                 
         </div>
+        </Suspense>
     );
 };
 

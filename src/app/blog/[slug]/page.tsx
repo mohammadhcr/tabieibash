@@ -8,6 +8,8 @@ import { SignedIn, SignedOut } from '@clerk/nextjs';
 import Image from 'next/image';
 import { FaRegTrashAlt } from "react-icons/fa";
 import type { Metadata } from "next";
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 export const metadata: Metadata = {
   title: "سینگل پست | طبیعی باش",
@@ -62,6 +64,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
     const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, trash, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, submit, cBezar, sendIcon, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
     
     return (
+        <Suspense fallback={<Loading />}>
             <div className={wrapper}>
                 <div className={info}>
                     <h2 className={album}>{blogpost.title}</h2>
@@ -132,6 +135,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                         <h2 className={cBezarOut}>برای ثبت «نظر» وارد حساب کاربری‌تون بشین</h2>
                     </SignedOut>
             </div>
+            </Suspense>
     );
 };
 

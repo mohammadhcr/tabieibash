@@ -123,12 +123,12 @@
         .trash{
             color: #b44a4a;
             background: #422727;
-            border-radius: 50%;
+            border-radius: 2rem 0 50% 0;
             cursor: pointer;
-            padding: 6px;
+            padding: 12px 10px 10px 12px;
             position: absolute;
-            top: 6px;
-            left: 10px;
+            top: -3px;
+            left: -3px;
             font-size: 14px;
 
             &:hover{

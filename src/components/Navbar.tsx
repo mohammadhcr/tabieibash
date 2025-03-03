@@ -67,7 +67,7 @@ const Navbar = () => {
                         <span></span>
                     </div>
                     <div className={logoTitle}>
-                        <Link href="/" className={rapWViseLogo}>
+                        <Link onClick={menuCloser} href="/" className={rapWViseLogo}>
                             <Image src={logo} alt='' />
                         </Link>
                     </div>

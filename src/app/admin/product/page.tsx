@@ -18,11 +18,13 @@ const ProductAdmin = () => {
 
     const fileExt = imageFile!.name.split(".").pop();
     const fileName = `${Date.now()}.${fileExt}`
-    const filePath = `productsimg/${fileName}`;
+    const filePath = `${fileName}`;
 
-    await supabase.storage.from("productsimg").upload(filePath, imageFile!);
+    const {error} = await supabase.storage.from("products").upload(filePath, imageFile!);
 
-    const { data: publicUrlData } = supabase.storage.from("productsimg").getPublicUrl(filePath);
+    console.log(error)
+
+    const { data: publicUrlData } = supabase.storage.from("products").getPublicUrl(filePath);
     const imageUrl = publicUrlData.publicUrl;
 
     const newProduct = {

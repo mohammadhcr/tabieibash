@@ -7,7 +7,7 @@ import logo from "../../../public/logo.png"
 import Image from 'next/image';
 import { useSignIn } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Loading from '@/app/loading';
 import { FaEye, FaLock } from 'react-icons/fa';
 
@@ -87,7 +87,7 @@ const ForgotPassword = () => {
     const {sForm, signup, title, inputs, submitB, bxlp, bxlpActive, verifyCode, bxl, btnLoader, errMsgCode, input, placeholder} = styles;
 
     return (
-        <>
+        <Suspense fallback={<Loading />}>
         <form className={sForm}>
             {!pendingVerification ? 
                 <div className={signup}>
@@ -147,7 +147,7 @@ const ForgotPassword = () => {
             
             
         </form>
-        </>
+        </Suspense>
     );
 };
 

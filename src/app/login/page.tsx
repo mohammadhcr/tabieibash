@@ -11,7 +11,7 @@ import logo from "../../../public/logo.png"
 import Image from 'next/image';
 import { useSignIn } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Loading from '@/app/loading';
 
 
@@ -99,7 +99,7 @@ const Login = () => {
     const {sForm, signup, title, inputs, submitB, errMsg, options, socialLoginButtons, line, socialLoginButton, bxl, bxlp, btnLoader, bxlpActive, input, placeholder} = styles;
 
     return (
-        <>
+        <Suspense fallback={<Loading />}>
         <form className={sForm}>
                 <div className={signup}>
                     <div className={title}>
@@ -153,7 +153,7 @@ const Login = () => {
                         </div>
                 </div>
         </form>
-        </>
+        </Suspense>
     );
 };
 

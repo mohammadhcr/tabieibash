@@ -59,6 +59,7 @@
                     font-size: 16px;
                     color: #4ab46f;
                     cursor: pointer;
+                    will-change: auto;
 
                     &:hover{
                         background: #4ab46f;
@@ -73,6 +74,7 @@
                     font-size: 16px;
                     color: #b44a4a;
                     cursor: pointer;
+                    will-change: auto;
 
                     &:hover{
                         background: #b44a4a;
@@ -164,16 +166,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 20px;
     user-select: none;
 
     .emptyIcon{
         color: var(--color1);
-        font-size: 82px;
+        font-size: 86px;
     }
 
     h2{
-        font-size: 44px;
+        font-size: 42px;
         font-weight: 800;
         color: var(--color1);
         text-shadow: -4px 4px 0px #4f4f4f;

@@ -6,6 +6,8 @@ import { revalidateTag } from 'next/cache';
 import Image from 'next/image';
 import { FaPlus } from 'react-icons/fa6';
 import { FaCheck } from "react-icons/fa";
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 const Product = async ({params}: {params: Promise<{slug: string}>}) => {
 
@@ -42,6 +44,7 @@ const Product = async ({params}: {params: Promise<{slug: string}>}) => {
     const {wrapper, info, price, photo, shopOut, cartSubmit, plusIcon, section, title, category, prePrice, productDesc, buySection, existed} = styles;
     
     return (
+        <Suspense fallback={<Loading />}>
         <div className={wrapper}>
                 <div className={photo}>
                     <Image src={product.imageurl} alt="Product Image" width={1080} height={1080} />
@@ -71,6 +74,7 @@ const Product = async ({params}: {params: Promise<{slug: string}>}) => {
                         </SignedOut>
                 </div>
             </div>
+            </Suspense>
     )
 };
 

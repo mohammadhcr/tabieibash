@@ -12,7 +12,7 @@ import logo from "../../../public/logo.png"
 import Image from 'next/image';
 import { useSignUp } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Loading from '@/app/loading';
 
 const Signup = () => {
@@ -136,7 +136,7 @@ const Signup = () => {
     const {sForm, signup, title, inputs, submitB, errMsg, options, socialLoginButtons, line, socialLoginButton, verifyCode, bxl, bxlp, btnLoader, errMsgCode, bxlpActive, input, placeholder} = styles;
 
     return (
-        <>
+        <Suspense fallback={<Loading />}>
         <form className={sForm}>
             {!pendingVerification ? 
                 <div className={signup}>
@@ -221,7 +221,7 @@ const Signup = () => {
             
             
         </form>
-        </>
+        </Suspense>
     );
 };
 

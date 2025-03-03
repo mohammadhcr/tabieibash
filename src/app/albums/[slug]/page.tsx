@@ -4,6 +4,8 @@ import styles from '../../../styles/Album.module.scss';
 import { FaSpotify, FaSoundcloud, FaYoutube } from "react-icons/fa6";
 import type { Metadata } from "next";
 import { SiApplemusic } from "react-icons/si";
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 export const metadata: Metadata = {
   title: "دریافت اثر | طبیعی باش",
@@ -18,6 +20,7 @@ const Podcast = async ({params}: {params: Promise<{slug: string}>}) => {
     const {wrapper, info, album, artist, description, links, artwork, section, listen, avai, statick, youtube, episodeDesc, podcastInfo, spotify, applePod, soundCloud, platformIcon} = styles;
     
     return (
+        <Suspense fallback={<Loading />}>
             <div className={wrapper}>
                 <div className={artwork}>
                     <img src={rap.artwork} alt="artwork" />
@@ -45,6 +48,7 @@ const Podcast = async ({params}: {params: Promise<{slug: string}>}) => {
                     </div>
                 </div>
             </div>
+            </Suspense>
     );
 };
 
