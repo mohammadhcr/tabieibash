@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from '../../../styles/Podcast.module.scss';
 import { FaSpotify, FaSoundcloud, FaPodcast } from "react-icons/fa6";
 import type { Metadata } from "next";

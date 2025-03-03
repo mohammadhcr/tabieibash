@@ -59,7 +59,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
         revalidateTag('comments')
     }
 
-    const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, trash, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, submit, cBezar, sendIcon, artwork, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
+    const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, trash, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, submit, cBezar, sendIcon, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
     
     return (
             <div className={wrapper}>

@@ -64,7 +64,7 @@ const Cart = async () => {
         revalidateTag('cart')
     }
     
-    const {plusBtn, minusBtn, clearBtn, cart, cartTitle, cartPrice, checkout, emptyCart, checkoutBTN, clearBTN, fPrice, quantityControl, dot, info, BTNs, stateInfo, emptyIcon, cartPhoto} = styles;
+    const {plusBtn, minusBtn, clearBtn, cart, cartTitle, cartPrice, checkout, emptyCart, checkoutBTN, clearBTN, fPrice, quantityControl, dot, info, BTNs, emptyIcon, cartPhoto} = styles;
 
     return (
         <div className='userWrapper'>
