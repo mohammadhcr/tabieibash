@@ -1,29 +1,32 @@
+import supabase from '@/supabase';
 import HamsedaCard from '../../components/HamsedaCard';
 import styles from '../../styles/Items.module.scss';
 import Footer from '../../components/Footer';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "پادکست همصدا | طبیعی باش",
+  title: "آلبوم‌ها | طبیعی باش",
 };
 
-interface Podcast {
+interface Album {
     id: number
-    episodeNumber: string
-    episodeName: string
-    episodeDescription: string
-    releaseDate: number
+    title: string
+    artist: string
+    description: string
+    releaseyear: number
+    releasemonth: number
+    releaseday: number
     slug: string
     artwork: string
     soundcloud: string
     spotify: string
     apple: string
+    youtube: string
 }
 
 const Hamseda = async () => {
 
-    const response = await fetch("https://tabieibash.vercel.app/api/podcast")
-    const data = await response.json()
+    const { data } = await supabase.from('albums').select('*')
 
     const {itemContainer, itemText, itemTitle, cards} = styles;
 
@@ -31,11 +34,11 @@ const Hamseda = async () => {
         <>
             <div className={itemContainer}>
                 <div>
-                    <h2 className={itemTitle}>پادکست همصدا</h2>
-                    <p className={itemText}>همصدا يه پادكست موضوع محوره كه از ديد مخاطب‌ها، مسائل مختلف در حوزه‌ی رپ فارسى رو بررسى می‌كنه.</p>
+                    <h2 className={itemTitle}>آلبوم‌ها</h2>
+                    <p className={itemText}>آلبوم‌ها و آثاری که تحت تشکل ملتفت منتشر شده‌اند</p>
                 </div>
                 <div className={cards}>
-                    {data.map((podcast: Podcast) => <HamsedaCard {...podcast} key={podcast.id} />)}
+                    {data?.map((album: Album) => <HamsedaCard {...album} key={album.id} />)}
                 </div>
             </div>
             <Footer />

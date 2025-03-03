@@ -24,7 +24,7 @@
         p{
             color: var(--color2);
             font-size: 18px;
-            line-height: 2rem;
+            line-height: 34px;
             font-weight: 400;
             margin: 8px 0 24px;
         }
@@ -33,8 +33,8 @@
             border-radius: 1rem;
             background: var(--color4);
             color: var(--color1);
-            width: 136px;
-            height: 56px;
+            width: 160px;
+            height: 62px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -87,7 +87,7 @@
         p{
             color: var(--color2);
             font-size: 18px;
-            line-height: 2rem;
+            line-height: 34px;
             font-weight: 400;
             margin: 8px 0 24px;
         }
@@ -96,8 +96,8 @@
             border-radius: 1rem;
             background: var(--color4);
             color: var(--color1);
-            width: 136px;
-            height: 56px;
+            width: 160px;
+            height: 62px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -162,7 +162,7 @@
 
         .links{
             display: flex;
-            gap: 48px;
+            gap: 42px;
             margin-top: 36px;
         }
 
@@ -170,7 +170,8 @@
             border-radius: 1rem;
             background: var(--color4);
             color: var(--color1);
-            padding: 14px 36px;
+            padding: 16px 36px;
+            font-weight: 600;
 
             &:hover{
                 background: var(--color11);
@@ -182,7 +183,8 @@
             border: 2px solid var(--color7);
             background: var(--color5);
             color: var(--color1);
-            padding: 14px 32px;
+            padding: 16px 32px;
+            font-weight: 400;
 
             &:hover{
                 background: var(--color6);
