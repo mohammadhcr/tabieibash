@@ -2,8 +2,6 @@
 
 ### 📖 توضیحات
 طراح و توسعه‌دهنده‌ی این پروژه خودم بودم و حدودا ۲ الی ۳ هفته زمان برد تا ورژن اولش منتشر شه؛ از سوپابیس و کلرک استفاده کردم تا پروژه‌م کامل شه و به‌طور واقعی کار کنه و فقط محدود به فرانت-اند نباشه. در ادامه بیشتر توضیح می‌دم.
-Back-End & Database: Supabase
-User Auth: Clerk (Custom)
 
 ---
 
@@ -18,7 +16,7 @@ User Auth: Clerk (Custom)
 
 ## 🛠️ تکنولوژی‌هایی که استفاده کردم
 - 🖥️ **Front-End:** NEXT.JS 15
-- 📡 **Backend:** Supabase, Clerk
+- 📡 **Backend:** Supabase, Clerk (Auth)
 - 🗄️ **Database:** PostgreSQL (Supabase)
 
 ---
@@ -30,4 +28,3 @@ User Auth: Clerk (Custom)
 
 ## ⭐️ حمایت کنین
 یه ⭐️ بدین اگه خوشتون اومد!
-
