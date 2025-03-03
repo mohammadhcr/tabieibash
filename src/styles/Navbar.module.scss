@@ -458,8 +458,12 @@
     .menuList{
         display: flex;
     }
+
+    .rightSide .userAccount {
+        gap: 0;
+    }
     
-    .nav, .rightSide .userAccount .signupBtn, .rightSide .userAccount .cartBtn{
+    .nav, .rightSide .userAccount .signupBtn, .rightSide .userAccount .loginBtn, .rightSide .userAccount .profileBtn, .rightSide .userAccount .profileImage{
         display: none;
     }
 
@@ -468,9 +472,8 @@
         bottom: 0;
         width: 100%;
         height: 3.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         background: var(--color9);
         backdrop-filter: saturate(180%) blur(6px);
         z-index: 120;
@@ -485,11 +488,16 @@
             justify-content: space-between;
             font-size: 10px;
             font-weight: 500;
-            padding: 8px 0 4px;
+            padding: 6px 0 2px;
     
             .iosIcon{
                 display: block;
-                font-size: 22px;
+                font-size: 26px;
+            }
+
+            .iosImage{
+                border-radius: 50%;
+                border: 2px solid var(--color2);
             }
         }
     }

@@ -1,5 +1,5 @@
 .landingBox{
-    min-height: 60vh;
+    min-height: 40vh;
     width: 56%;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .landingBoxodd{
-    min-height: 60vh;
+    min-height: 40vh;
     width: 56%;
     display: flex;
     align-items: center;
@@ -125,7 +125,7 @@
 }
 
 .landingFirstBox{
-    min-height: 80vh;
+    min-height: 70vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -162,7 +162,7 @@
 
         .links{
             display: flex;
-            gap: 42px;
+            gap: 36px;
             margin-top: 36px;
         }
 
@@ -170,8 +170,12 @@
             border-radius: 1rem;
             background: var(--color4);
             color: var(--color1);
-            padding: 16px 36px;
             font-weight: 600;
+            width: 160px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover{
                 background: var(--color11);
@@ -183,7 +187,11 @@
             border: 2px solid var(--color7);
             background: var(--color5);
             color: var(--color1);
-            padding: 16px 32px;
+            width: 120px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 400;
 
             &:hover{
@@ -196,12 +204,12 @@
 @media screen and (min-width: 120px) and (max-width: 480px){
 
     .landingFirstBox{
-        padding: 0 18px;
+        padding: 5rem 18px;
     
         .title{
     
             h1{
-                font-size: 42px;
+                font-size: 40px;
             }
     
             p{
@@ -214,14 +222,14 @@
         width: 100%;
         flex-direction: column-reverse;
         gap: 16px;
-        padding: 0 18px;
+        padding: 4rem 18px;
     
         .title{
             align-items: center;
             width: 100%;
     
             h2{
-                font-size: 40px;
+                font-size: 44px;
             }
     
             p{
@@ -246,14 +254,16 @@
         width: 100%;
         flex-direction: column;
         gap: 16px;
-        padding: 0 18px;
+        padding: 4rem 18px;
+        border-top: 2px solid var(--color7);
+        border-bottom: 2px solid var(--color7);
     
         .title{
             align-items: center;
             width: 100%;
     
             h2{
-                font-size: 40px;
+                font-size: 44px;
             }
     
             p{
@@ -278,7 +288,7 @@
 @media screen and (min-width: 481px) and (max-width: 780px){
 
     .landingFirstBox{
-        padding: 0 20px;
+        padding: 2rem 20px;
     
         .title{
     
@@ -296,7 +306,7 @@
         width: 100%;
         flex-direction: column-reverse;
         gap: 16px;
-        padding: 0 42px;
+        padding: 3rem 42px;
     
         .title{
             align-items: center;
@@ -328,7 +338,7 @@
         width: 100%;
         flex-direction: column;
         gap: 16px;
-        padding: 0 42px;
+        padding: 3rem 42px;
     
         .title{
             align-items: center;
@@ -360,7 +370,7 @@
 @media screen and (min-width: 781px) and (max-width: 1280px){
 
     .landingFirstBox{
-        padding: 0 28px;
+        padding: 2rem 28px;
     
         .title{
     
@@ -378,7 +388,7 @@
         width: 100%;
         flex-direction: column-reverse;
         gap: 16px;
-        padding: 0 100px;
+        padding: 3rem 100px;
     
         .title{
             align-items: center;
@@ -410,7 +420,7 @@
         width: 100%;
         flex-direction: column;
         gap: 16px;
-        padding: 0 100px;
+        padding: 3rem 100px;
     
         .title{
             align-items: center;

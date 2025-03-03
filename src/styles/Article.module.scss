@@ -150,8 +150,8 @@
     .mycommentParagraph{
         text-align: justify;
         color: var(--color1);
-        font-weight: 500;
-        font-size: 18px;
+        font-weight: 400;
+        font-size: 16px;
     }
 }
 
@@ -220,7 +220,7 @@
     .cBezar{
         color: var(--color1);
         font-weight: 700;
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 24px;
     }
 
@@ -279,7 +279,7 @@
             }
 
             &::placeholder{
-                font-size: 24px;
+                font-size: 22px;
             }
     }
 
@@ -410,7 +410,7 @@
     }
 
     .album{
-        font-size: 2rem;
+        font-size: 28px;
     }
 
     .artist{

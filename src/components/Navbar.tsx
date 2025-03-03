@@ -3,12 +3,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.scss';
-import { FaHome, FaPlus, FaShoppingCart, FaStore } from "react-icons/fa";
+import { FaPlus, FaShoppingCart, FaStore } from "react-icons/fa";
 import Image from 'next/image';
 import logo from "../../public/logo.png"
 import { SignedIn, SignedOut, useUser } from '@clerk/nextjs';
 import { GrArticle } from "react-icons/gr";
 import { FaUser } from 'react-icons/fa6';
+import { SiApplemusic } from 'react-icons/si';
 
 const Navbar = () => {
 
@@ -24,17 +25,23 @@ const Navbar = () => {
         setMenu(false)
     }
     
-    const {iosMenu, iosIcon, leftSide, header, nav, ul, li, logoTitle, rightSide, cartBtn, sup, menuClose, profileImage, rapWViseLogo, profileBtn, userAccount, hamburgerMenu, menuList, menuListActive, hamburgerMenuActive, menuItems, menuUser, loginBtn, signupBtn} = styles;
+    const {iosMenu, iosIcon, leftSide, header, nav, ul, li, logoTitle, rightSide, cartBtn, sup, iosImage, menuClose, profileImage, rapWViseLogo, profileBtn, userAccount, hamburgerMenu, menuList, menuListActive, hamburgerMenuActive, menuItems, menuUser, loginBtn, signupBtn} = styles;
 
     return (
         <>
                 <div className={iosMenu}>
-                    <Link href="/" onClick={menuCloser}><FaHome className={iosIcon} /> صفحه اصلی</Link>
+                    <SignedIn>
+                        <Link href="/profile" onClick={menuCloser}>
+                            {auth.user?.imageUrl ? <Image className={iosImage} src={auth.user.imageUrl} alt='' width={32} height={32} /> : <FaUser className={iosIcon} />}
+                            {auth.user?.username}
+                        </Link>
+                    </SignedIn>
+                    <SignedOut>
+                        <Link href="/login" onClick={menuCloser}><FaUser className={iosIcon} />ورود</Link>
+                    </SignedOut>
                     <Link href="/shop" onClick={menuCloser}><FaStore className={iosIcon} /> فروشگاه</Link>
                     <Link href="/blog" onClick={menuCloser}><GrArticle className={iosIcon} /> بـلاگ</Link>
-                    <SignedIn>
-                        <Link href="/cart" onClick={menuCloser}><FaShoppingCart className={iosIcon} /> سبد خرید</Link>
-                    </SignedIn>
+                    <Link href="/albums" onClick={menuCloser}><SiApplemusic className={iosIcon} /> آلبوم‌ها</Link>
                 </div>
             <div className={`${menuList} ${menu ? `${menuListActive}` : ""}`}>
                 <ul className={menuItems}>
@@ -77,14 +84,14 @@ const Navbar = () => {
                 <div className={rightSide}>
                     <div className={userAccount}>
                         <SignedOut>
-                            <Link href='/login' className={loginBtn}>ورود</Link>
+                            <Link onClick={menuCloser} href='/login' className={loginBtn}>ورود</Link>
                             <Link href='/signup' className={signupBtn}>عضویت</Link>
                         </SignedOut>
                         <SignedIn>
-                            <Link href='/cart'>
+                            <Link onClick={menuCloser} href='/cart'>
                                 <FaShoppingCart className={cartBtn} />
                             </Link>
-                            <Link href='/profile'>
+                            <Link onClick={menuCloser} href='/profile'>
                                 {auth.user?.imageUrl ? <Image className={profileImage} src={auth.user.imageUrl} alt='' width={44} height={44} /> : <FaUser className={profileBtn} />}
                             </Link>
                         </SignedIn>
