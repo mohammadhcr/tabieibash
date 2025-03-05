@@ -12,11 +12,12 @@
         user-select: none;
 
         .cartPhoto{
-            border-radius: 0 0.7rem 0.7rem 0;
-            position: relative;
-            width: 80px;
-            height: 100%;
-            overflow: hidden;
+            opacity: 0.04;
+
+            img{
+                user-select: none;
+                -webkit-user-drag: none;
+            }
         }
 
         .info{

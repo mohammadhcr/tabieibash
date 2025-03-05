@@ -7,6 +7,7 @@
     justify-content: center;
     user-select: none;
     margin: auto;
+    padding: 8rem 2rem 4rem;
 
     .title{
         display: flex;
@@ -63,6 +64,7 @@
 
 .landingBoxodd{
     min-height: 40vh;
+    padding: 4rem;
     width: 56%;
     display: flex;
     align-items: center;
@@ -127,6 +129,7 @@
 .landingFirstBox{
     min-height: 70vh;
     width: 100%;
+    padding: 4rem;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -289,7 +292,7 @@
 @media screen and (min-width: 481px) and (max-width: 780px){
 
     .landingFirstBox{
-        padding: 2rem 20px;
+        padding: 8rem 18px 4rem;
     
         .title{
     
@@ -307,7 +310,7 @@
         width: 100%;
         flex-direction: column-reverse;
         gap: 16px;
-        padding: 3rem 42px;
+        padding: 4rem 42px;
     
         .title{
             align-items: center;
@@ -339,7 +342,7 @@
         width: 100%;
         flex-direction: column;
         gap: 16px;
-        padding: 3rem 42px;
+        padding: 4rem 42px;
     
         .title{
             align-items: center;
@@ -371,7 +374,6 @@
 @media screen and (min-width: 781px) and (max-width: 1280px){
 
     .landingFirstBox{
-        padding: 2rem 28px;
     
         .title{
     
@@ -389,7 +391,6 @@
         width: 100%;
         flex-direction: column-reverse;
         gap: 16px;
-        padding: 3rem 100px;
     
         .title{
             align-items: center;
@@ -421,7 +422,6 @@
         width: 100%;
         flex-direction: column;
         gap: 16px;
-        padding: 3rem 100px;
     
         .title{
             align-items: center;

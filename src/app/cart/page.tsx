@@ -3,13 +3,13 @@ import { auth } from '@clerk/nextjs/server';
 import supabase from '@/supabase';
 import { BsCartX } from "react-icons/bs";
 import type { Metadata } from "next";
-import Image from 'next/image';
 import { GoDotFill } from "react-icons/go";
 import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { revalidateTag } from 'next/cache';
 import { Suspense } from 'react';
 import Loading from '../loading';
 import SubmitButton from '@/components/SubmitButton';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "سبد خرید | طبیعی باش",
@@ -75,7 +75,7 @@ const Cart = async () => {
             {cartItems?.length ? cartItems.map((item: Item) =>
                 <div className={cart} key={item.id}>
                     <div className={cartPhoto}>
-                        <Image src={item.productimage} fill style={{ objectFit: "cover" }} alt='Product Photo'></Image>
+                        <Image fill style={{ objectFit: 'cover' }} src={item.productimage} alt='Product Photo' />
                     </div>
                     <div className={info}>
                         <h2 className={cartTitle}>{item.producttitle}</h2>

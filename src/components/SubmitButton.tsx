@@ -11,7 +11,6 @@ const SubmitButton = ({children, classname} : {children: any, classname: string}
   return (
       <button type='submit' className={classname}>
         {pending ? <span className="btnLoader"></span> : children}
-        {/* {pending ? children : <span className="btnLoader"></span>} */}
       </button>
   )
 }

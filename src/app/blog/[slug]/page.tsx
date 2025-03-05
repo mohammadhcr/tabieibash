@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { Suspense } from 'react';
 import Loading from '@/app/loading';
 import SubmitButton from '@/components/SubmitButton';
+import { GoDotFill } from 'react-icons/go';
 
 export const metadata: Metadata = {
   title: "سینگل پست | طبیعی باش",
@@ -22,6 +23,9 @@ interface Comment{
     userAvatar: string
     username: string
     body: string
+    time: string
+    date: string
+    created_at: string
 }
 
 const Article = async ({params}: {params: Promise<{slug: string}>}) => {
@@ -32,8 +36,21 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
     
     const { data: blogcomments } = await supabase.from('comments').select('*').eq('postslug', slug)
 
-    const dateSplit = blogpost.created_at.split("T")
-    const dateFinalSplit = dateSplit[0].split("-")
+    const d = new Date(blogpost.created_at)
+
+    const formattedDate = d.toLocaleString('fa-IR', {year: 'numeric', month: 'short', day: 'numeric'});
+
+    const GetDate = (data: string) => {
+        const date = new Date(data)
+        const finalDate = date.toLocaleString('fa-IR', {year: 'numeric', month: 'long', day: 'numeric'});
+        return finalDate
+    }
+
+    const GetTime = (data: string) => {
+        const time = new Date(data)
+        const finalTime = time.toLocaleString('fa-IR', {hour: '2-digit', minute: '2-digit'});
+        return finalTime
+    }
 
     const userObj = await currentUser()
 
@@ -44,12 +61,15 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
             postslug: slug,
             username: userObj?.username,
             userAvatar: userObj?.imageUrl,
-            body: formData.get('cBody')
+            body: formData.get('cBody'),
         }
 
-        await supabase.from('comments').insert([newComment]).single()
+        if(newComment.body) {
+            
+            await supabase.from('comments').insert([newComment]).single()
 
-        revalidateTag('comments')
+            revalidateTag('comments')
+        }
     }
 
     const deleteComment = async (formData: FormData) => {
@@ -62,7 +82,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
         revalidateTag('comments')
     }
 
-    const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, cBezar, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
+    const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, commentTime, mycommentTime, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, cBezar, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
     
     return (
         <Suspense fallback={<Loading />}>
@@ -76,7 +96,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                         </span>
                         <span>
                             <span className={statick}>تاریخ انتشار:</span>
-                            {`${dateFinalSplit[0]}/${dateFinalSplit[1]}/${dateFinalSplit[2]}`}
+                            {formattedDate}
                         </span>
                         <span>
                             <span className={statick}>نویسنده:</span>
@@ -92,7 +112,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                     </div>
                 </div>
                 
-                {blogcomments!.map((comment: Comment) => comment ? (userObj?.username === comment.username) ? 
+                {blogcomments!.map((comment: Comment) => comment ? (userObj?.username === comment.username) ?
                     <div className={mycommentWrapper} key={comment.id}>
                         <div className={mycommentContainer}>
                             {userObj?.imageUrl ? <Image src={userObj?.imageUrl} alt='Avatar' width={32} height={32} />
@@ -107,6 +127,11 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                                     </form>
                                 </div>
                                 <p className={mycommentParagraph}>{comment.body}</p>
+                                <div className={mycommentTime}>
+                                    <span>{GetDate(comment.created_at)}</span>
+                                        <GoDotFill />
+                                    <span>{GetTime(comment.created_at)}</span>
+                                </div>
                                 <FaMoon className={mymoon} />
                             </div>
                         </div>
@@ -119,6 +144,11 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                                 <div className={commentSection}>
                                     <h2>{comment.username}</h2>
                                     <p className={commentParagraph}>{comment.body}</p>
+                                    <div className={commentTime}>
+                                    <span>{GetTime(comment.created_at)}</span>
+                                        <GoDotFill />
+                                    <span>{GetDate(comment.created_at)}</span>
+                                </div>
                                     <FaMoon className={moon} />
                                 </div>
                             </div>

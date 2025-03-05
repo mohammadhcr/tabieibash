@@ -13,10 +13,6 @@
     border-radius: 1rem;
     padding: 16px;
 
-    &:hover .datas .cardP .hashtag{
-        color: var(--color3);
-    }
-
     &:hover .datas .readSection{
         background: var(--color8);
     }
@@ -40,18 +36,25 @@
 
             .datas{
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
                 width: 100%;
+                height: 20px;
                 position: relative;
 
                 .cardP{
                     font-size: 14px;
                     color: var(--color2);
-                    font-weight: 300;
+                    font-weight: 400;
                     display: flex;
-                    gap: 8px;
+                    align-items: center;
+                    gap: 10px;
         
                     .hashtag{
-                        font-size: 20px;
+                        font-size: 24px;
+                        padding: 4px;
+                        background: var(--color7);
+                        border-radius: 50%;
                     }
                 }
 
