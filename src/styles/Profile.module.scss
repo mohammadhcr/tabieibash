@@ -38,15 +38,42 @@
     border: 2px solid #e43030;
     font-size: 14px;
     font-weight: 500;
-    padding: 0 16px;
-    height: 46px;
+    width: 150px;
+    height: 48px;
     color: #e43030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0.7rem;
     cursor: pointer;
     margin-top: 28px;
 
+    .btnLoader {
+        width: 28px;
+        height: 28px;
+        border: 3px solid #e43030;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        animation: rotation 1s linear infinite;
+    }
+
     &:hover{
         background: #e43030;
         color: #fff;
+    }
+
+    &:hover .btnLoader{
+        border: 3px solid #fff;
+        border-bottom-color: transparent;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

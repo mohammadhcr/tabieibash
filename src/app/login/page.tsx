@@ -137,12 +137,12 @@ const Login = () => {
                         </div>
                         <div className={socialLoginButtons}>
                             <button onClick={googleLogin} className={socialLoginButton}>
-                                {btnGoogle ? <span className={btnLoader}></span> : <FcGoogle className={bxl} />}
-                                ورود با گوگل
+                                <FcGoogle className={bxl} />
+                                {btnGoogle ? <span className={btnLoader}></span> : "ورود با گوگل"}
                             </button>
                             <button onClick={gitHubLogin} className={socialLoginButton}>
-                                {btnGitHub ? <span className={btnLoader}></span> : <SiGithub className={bxl} />}
-                                ورود با گیت‌هاب
+                                <SiGithub className={bxl} />
+                                {btnGitHub ? <span className={btnLoader}></span> : "ورود با گیت‌هاب"}
                             </button>
                         </div>
                         <div className={options}>

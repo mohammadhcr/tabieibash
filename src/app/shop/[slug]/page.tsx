@@ -8,6 +8,7 @@ import { FaPlus } from 'react-icons/fa6';
 import { FaCheck } from "react-icons/fa";
 import { Suspense } from 'react';
 import Loading from '@/app/loading';
+import SubmitButton from '@/components/SubmitButton';
 
 const Product = async ({params}: {params: Promise<{slug: string}>}) => {
 
@@ -41,7 +42,7 @@ const Product = async ({params}: {params: Promise<{slug: string}>}) => {
         revalidateTag('cart')
     }
 
-    const {wrapper, info, price, photo, shopOut, cartSubmit, plusIcon, section, title, category, prePrice, productDesc, buySection, existed} = styles;
+    const {wrapper, info, price, photo, shopOut, section, title, category, prePrice, productDesc, buySection, existed} = styles;
     
     return (
         <Suspense fallback={<Loading />}>
@@ -59,12 +60,12 @@ const Product = async ({params}: {params: Promise<{slug: string}>}) => {
                         <span className={price}><span className={prePrice}>قیمت:</span> {product.price.toLocaleString('fa-IR')} تومان</span>
                         <SignedIn>
                             {existingItem ?
-                                <div className={existed}><FaCheck className={plusIcon} /> به سبد خرید اضافه شد!</div> :
+                                <div className={existed}><FaCheck /> به سبد خرید اضافه شد!</div> :
                                 <form action={addAction}>
-                                    <button className={cartSubmit} type='submit'>
-                                        <FaPlus className={plusIcon} />
+                                    <SubmitButton classname='cartSubmit'>
+                                        <FaPlus />
                                         افزودن به سبد خرید
-                                    </button>
+                                    </SubmitButton>
                                 </form>
                             }
                         </SignedIn>

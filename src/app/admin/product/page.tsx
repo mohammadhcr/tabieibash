@@ -12,17 +12,18 @@ const ProductAdmin = () => {
     const [productPrice, setProductPrice] = useState("");
     const [productSlug, setProductSlug] = useState("");
     const [imageFile, setImageFile] = useState<File | null>(null);
+    const [loading, setLoading] = useState(false)
 
   const addProduct = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    setLoading(true)
 
     const fileExt = imageFile!.name.split(".").pop();
     const fileName = `${Date.now()}.${fileExt}`
     const filePath = `${fileName}`;
 
-    const {error} = await supabase.storage.from("products").upload(filePath, imageFile!);
-
-    console.log(error)
+    await supabase.storage.from("products").upload(filePath, imageFile!);
 
     const { data: publicUrlData } = supabase.storage.from("products").getPublicUrl(filePath);
     const imageUrl = publicUrlData.publicUrl;
@@ -45,7 +46,7 @@ const ProductAdmin = () => {
 
     }
 
-    const {commentInput, input, submit, cBezar, sendIcon, wrapper, fileInput} = styles;
+    const {commentInput, input, submit, cBezar, wrapper, fileInput, btnLoader} = styles;
 
   return (
     <div className={wrapper}>
@@ -67,7 +68,10 @@ const ProductAdmin = () => {
             <label>عکس محصول</label>
             <input className={fileInput} type='file' onChange={(e) => setImageFile(e.target.files?.[0] || null)} />
 
-            <button className={submit} onClick={addProduct}><FaPlus className={sendIcon} />اضافه کردن</button>
+            <button className={submit} onClick={addProduct}>
+              <FaPlus />
+              {loading ? <span className={btnLoader}></span> : "اضافه کردن"}
+            </button>
         </form>
     </div>
   )

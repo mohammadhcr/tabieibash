@@ -1,7 +1,7 @@
 import styles from '../../../styles/Article.module.scss';
 import { FaMoon } from "react-icons/fa6";
 import supabase from '@/supabase';
-import { IoIosSend } from "react-icons/io";
+import { FaArrowCircleUp } from "react-icons/fa";
 import { revalidateTag } from 'next/cache';
 import { currentUser } from '@clerk/nextjs/server';
 import { SignedIn, SignedOut } from '@clerk/nextjs';
@@ -10,6 +10,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import type { Metadata } from "next";
 import { Suspense } from 'react';
 import Loading from '@/app/loading';
+import SubmitButton from '@/components/SubmitButton';
 
 export const metadata: Metadata = {
   title: "سینگل پست | طبیعی باش",
@@ -61,7 +62,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
         revalidateTag('comments')
     }
 
-    const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, trash, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, submit, cBezar, sendIcon, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
+    const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, cBezar, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
     
     return (
         <Suspense fallback={<Loading />}>
@@ -102,7 +103,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                                     <h2>{comment.username}</h2>
                                     <form action={deleteComment}>
                                         <input name='id' type="hidden" value={comment.id} />
-                                        <button className={trash} type='submit'><FaRegTrashAlt /></button>
+                                        <SubmitButton classname='trash'><FaRegTrashAlt /></SubmitButton>
                                     </form>
                                 </div>
                                 <p className={mycommentParagraph}>{comment.body}</p>
@@ -128,7 +129,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                         <form action={addComment} className={commentInput}>
                             <h2 className={cBezar}>نظرت چیه؟ کامنت بذار</h2>
                             <textarea className={textInput} name="cBody" placeholder="به‌نظر من..."></textarea>
-                            <button className={submit} type='submit'><IoIosSend className={sendIcon} />ارسال</button>
+                            <SubmitButton classname='submit'><FaArrowCircleUp /> ارسال</SubmitButton>
                         </form>
                     </SignedIn>
                     <SignedOut>

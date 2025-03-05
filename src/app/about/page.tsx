@@ -14,7 +14,7 @@ const About = () => {
     const {mainContainer, aboutUsTitle, contactLinks, contactSection, cLink, cIcon, aTitle, aSubTitle} = styles;
     
     return (
-        <>
+        <div className='userWrapper'>
         <div className={mainContainer}>
             <div className={aboutUsTitle}>
                 <h2 className={aTitle}>طبیعی باش</h2>
@@ -33,7 +33,7 @@ const About = () => {
                 </div>
             </div>
         </div>
-        </>
+        </div>
     );
 };
 

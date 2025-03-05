@@ -100,41 +100,33 @@
 
     .soundCloud{
         color: #ff3300;
-        background: var(--color5);
 
         &:hover{
-            color: #fff;
-            background: #ff3300;
+            background: #ff330022;
         }
     }
 
     .youtube{
         color: #ff0033;
-        background: var(--color5);
 
         &:hover{
-            color: #fff;
-            background: #ff0033;
+            background: #ff003322;
         }
     }
 
     .spotify{
         color: #1DB954;
-        background: var(--color5);
 
         &:hover{
-            color: #fff;
-            background: #1DB954;
+            background: #1DB95422;
         }
     }
 
     .applePod{
         color: #fb4b64;
-        background: var(--color5);
 
         &:hover{
-            color: #fff;
-            background: #fb4b64;
+            background: #fb4b6422;
         }
     }
     
@@ -155,7 +147,6 @@
 
     .platformIcon{
         font-size: 64px;
-        will-change: auto;
     }
 }
 

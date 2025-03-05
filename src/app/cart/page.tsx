@@ -9,6 +9,7 @@ import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { revalidateTag } from 'next/cache';
 import { Suspense } from 'react';
 import Loading from '../loading';
+import SubmitButton from '@/components/SubmitButton';
 
 export const metadata: Metadata = {
   title: "سبد خرید | طبیعی باش",
@@ -66,7 +67,7 @@ const Cart = async () => {
         revalidateTag('cart')
     }
     
-    const {plusBtn, minusBtn, clearBtn, cart, cartTitle, cartPrice, checkout, emptyCart, checkoutBTN, clearBTN, fPrice, quantityControl, dot, info, BTNs, emptyIcon, cartPhoto} = styles;
+    const {cart, cartTitle, cartPrice, checkout, emptyCart, checkoutBTN, fPrice, quantityControl, dot, info, BTNs, emptyIcon, cartPhoto} = styles;
 
     return (
         <Suspense fallback={<Loading />}>
@@ -83,19 +84,19 @@ const Cart = async () => {
                             <form action={plusQuantity}>
                                 <input value={item.id} name='plusid' type="hidden" />
                                 <input value={item.quantity} name='plusquantity' type="hidden" />
-                                <button className={plusBtn} type='submit'><FaPlus /></button>
+                                <SubmitButton classname='plusBtn'><FaPlus /></SubmitButton>
                             </form>
                             {item.quantity === 1
                             ?
                             <form action={deleteItem}>
                                 <input value={item.id} name='clearid' type="hidden" />
-                                <button className={clearBtn} type='submit'><FaTrash /></button>
+                                <SubmitButton classname='clearBtn'><FaTrash /></SubmitButton>
                             </form>
                             :
                             <form action={minusQuantity}>
                                 <input value={item.id} name='minusid' type="hidden" />
                                 <input value={item.quantity} name='minusquantity' type="hidden" />
-                                <button className={minusBtn} type='submit'><FaMinus /></button>
+                                <SubmitButton classname='minusBtn'><FaMinus /></SubmitButton>
                             </form>
                             }
                         </div>
@@ -110,7 +111,7 @@ const Cart = async () => {
                         <div className={BTNs}>
                             <button type='submit' className={checkoutBTN}>تسویه حساب</button>
                             <form action={clearCart}>
-                                <button type='submit' className={clearBTN}>پاک کردن</button>
+                                <SubmitButton classname='clearAll'>پاک کردن</SubmitButton>
                             </form>
                         </div>
                     </div>

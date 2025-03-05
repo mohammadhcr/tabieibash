@@ -21,21 +21,23 @@
         span{
             padding: 18px;
             border-radius: 2rem;
+            background: var(--color8);
+            opacity: 0;
 
             .playIcon{
                 font-size: 10px;
-                color: #fafafa00;
+                color: #fafafa;
             }
         }
     }
 
     &:hover .cardP span{
-        background:var(--color8);
+        background: var(--color8);
+        opacity: 1;
     }
 
     &:hover .cardP span .playIcon{
         font-size: 24px;
-        color: #fafafa;
     }
 }
     

@@ -1,6 +1,6 @@
     .cart{
         background: var(--color6);
-        border-radius: 0.7rem 0 0 0.7rem;
+        border-radius: 0.7rem;
         display: flex;
         flex-direction: row;
         align-items: start;
@@ -51,36 +51,6 @@
                 bottom: 6px;
                 display: flex;
                 gap: 18px;
-
-                .plusBtn{
-                    padding: 6px;
-                    border: 2px solid #4ab46f;
-                    border-radius: 0.7rem;
-                    font-size: 16px;
-                    color: #4ab46f;
-                    cursor: pointer;
-                    will-change: auto;
-
-                    &:hover{
-                        background: #4ab46f;
-                        color: #fff;
-                    }
-                }
-
-                .minusBtn, .clearBtn{
-                    padding: 6px;
-                    border: 2px solid #b44a4a;
-                    border-radius: 0.7rem;
-                    font-size: 16px;
-                    color: #b44a4a;
-                    cursor: pointer;
-                    will-change: auto;
-
-                    &:hover{
-                        background: #b44a4a;
-                        color: #fff;
-                    }
-                }
             }
         }
 
@@ -142,22 +112,6 @@
 
                 &:hover{
                     background: var(--color10);
-                }
-            }
-
-            .clearBTN{
-                padding: 0 18px;
-                height: 58px;
-                background: #b44a4a;
-                font-size: 16px;
-                border-radius: 0.7rem;
-                outline: none;
-                font-weight: 500;
-                color: #fff;
-                cursor: pointer;
-
-                &:hover{
-                    background: #ad4141;
                 }
             }
         }
