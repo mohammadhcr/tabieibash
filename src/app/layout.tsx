@@ -22,6 +22,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="fa">
+        <head>
+          <link rel="manifest" href="/manifest.json" />
+        </head>
         <body className={iransansx.className}>
           <Navbar />
           <ClerkLoading>

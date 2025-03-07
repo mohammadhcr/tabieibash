@@ -3,8 +3,14 @@ import Footer from '../components/Footer';
 import styles from '../styles/RapWVise.module.scss';
 import { GrArticle } from "react-icons/gr";
 import { FaStore, FaPodcast } from "react-icons/fa";
+import { Workbox } from "workbox-window";
 
 const Home = () => {
+    
+    if ("serviceWorker" in navigator) {
+        const wb = new Workbox("/sw.js");
+        wb.register();
+    }
 
     const {landingBox, title, icon, link, landingFirstBox, landingBoxodd, link1, links} = styles;
 

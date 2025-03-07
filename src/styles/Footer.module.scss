@@ -25,13 +25,13 @@
 @media screen and (min-width: 120px) and (max-width: 480px){
 
     .footer{
-        margin: 0 2rem 8rem;
-        border-radius: 1rem;
+        margin: 0 1rem 6rem;
+        border-radius: 0.7rem;
     }
     
     .copyright{
         flex-direction: column;
-        line-height: 1.8rem;
+        gap: 12px;
 
         p{
             font-size: 12px;
