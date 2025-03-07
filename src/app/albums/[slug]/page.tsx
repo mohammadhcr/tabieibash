@@ -17,6 +17,9 @@ const Podcast = async ({params}: {params: Promise<{slug: string}>}) => {
 
     const { data: rap } = await supabase.from('albums').select('*').eq('slug', slug).single()
 
+    const releasedata = new Date(rap.releasedate)
+    const releasedate = releasedata.toLocaleString('fa-IR', {year: 'numeric', month: 'short', day: 'numeric'});
+
     const {wrapper, info, album, artist, description, links, artwork, section, listen, avai, statick, youtube, episodeDesc, podcastInfo, spotify, applePod, soundCloud, platformIcon} = styles;
     
     return (
@@ -34,7 +37,7 @@ const Podcast = async ({params}: {params: Promise<{slug: string}>}) => {
                         </div>
                         <div className={description}>
                             <span className={statick}>تاریخ انتشار:</span>
-                                {rap.releaseday} {rap.releasemonth} {rap.releaseyear}
+                                {releasedate}
                         </div>
                     </div>
                     <div className={listen}>

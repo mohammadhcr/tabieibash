@@ -48,7 +48,6 @@ const Navbar = () => {
                     <Link href="/shop" onClick={menuCloser}><li>فروشگاه</li></Link>
                     <Link href="/blog" onClick={menuCloser}><li>بـلاگ</li></Link>
                     <Link href="/albums" onClick={menuCloser}><li>آلبوم‌ها</li></Link>
-                    <Link href="/review" onClick={menuCloser}><li>صفحه ۴۰۴</li></Link>
                     <Link href="/about" onClick={menuCloser}><li>درباره ما</li></Link>
                 </ul>
                 <SignedOut>
@@ -76,7 +75,6 @@ const Navbar = () => {
                             <li className={li}><Link href="/shop"><hr /> فروشگاه</Link></li>
                             <li className={li}><Link href="/blog"><hr /> بـلاگ</Link></li>
                             <li className={li}><Link href="/albums"><hr /> آلبوم‌ها</Link></li>
-                            <li className={li}><Link href="/review"><hr /> صفحه ۴۰۴</Link></li>
                             <li className={li}><Link href="/about"><hr /> درباره ما</Link></li>
                         </ul>
                     </nav>

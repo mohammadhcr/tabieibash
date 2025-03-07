@@ -12,11 +12,11 @@
 
     p{
         font-size: 12px;
-        font-weight: 500;
+        font-variation-settings: "wght" 500;
 
         a{
             color: var(--color4);
-            font-weight: 600;
+            font-variation-settings: "wght" 600;
             font-size: 14px;
         }
     }

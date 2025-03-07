@@ -25,7 +25,7 @@
         font-size: 32px;
         color: var(--color1);
         user-select: none;
-        font-weight: 800;
+        font-variation-settings: "wght" 800;
     }
 
     p{
@@ -33,7 +33,7 @@
         font-size: 15px;
         color: var(--color2);
         user-select: none;
-        font-weight: 500;
+        font-variation-settings: "wght" 500;
     }
 }
 
@@ -62,7 +62,7 @@
             user-select: none;
             color: var(--color2);
             padding-bottom: 0.5rem;
-            font-weight: 400;
+            font-variation-settings: "wght" 400;
         }
 
         div{
@@ -122,7 +122,7 @@
     user-select: none;
     color: #ff3e3e;
     direction: ltr;
-    font-weight: 300;
+    font-variation-settings: "wght" 300;
 }
 
 .errMsgCode{
@@ -132,7 +132,7 @@
     user-select: none;
     color: #ff3e3e;
     direction: ltr;
-    font-weight: 300;
+    font-variation-settings: "wght" 300;
 }
 
 .submitB button{
@@ -144,7 +144,7 @@
     color: #fff;
     cursor: pointer;
     transition: all 0.2s;
-    font-weight: 700;
+    font-variation-settings: "wght" 700;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,7 +217,7 @@
 
 .socialLoginButton{
     width: 280px;
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
     margin: auto;
     margin-bottom: 1rem;
     height: 48px;

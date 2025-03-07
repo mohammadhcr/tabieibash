@@ -24,20 +24,20 @@
     color: var(--color1);
     font-size: 42px;
     text-shadow: -2px 2px 0 var(--color2);
-    font-weight: 800;
+    font-variation-settings: "wght" 800;
     margin: 6px 0;
 }
 
 .userEmail{
     color: var(--color2);
     font-size: 20px;
-    font-weight: 400;
+    font-variation-settings: "wght" 400;
 }
 
 .userLogout{
     border: 2px solid #e43030;
     font-size: 14px;
-    font-weight: 500;
+    font-variation-settings: "wght" 500;
     width: 150px;
     height: 48px;
     color: #e43030;

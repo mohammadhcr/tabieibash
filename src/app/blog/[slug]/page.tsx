@@ -145,10 +145,10 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                                     <h2>{comment.username}</h2>
                                     <p className={commentParagraph}>{comment.body}</p>
                                     <div className={commentTime}>
-                                    <span>{GetTime(comment.created_at)}</span>
-                                        <GoDotFill />
-                                    <span>{GetDate(comment.created_at)}</span>
-                                </div>
+                                        <span>{GetTime(comment.created_at)}</span>
+                                            <GoDotFill />
+                                        <span>{GetDate(comment.created_at)}</span>
+                                    </div>
                                     <FaMoon className={moon} />
                                 </div>
                             </div>

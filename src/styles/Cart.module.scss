@@ -17,6 +17,7 @@
             img{
                 user-select: none;
                 -webkit-user-drag: none;
+                -moz-user-select: none;
             }
         }
 
@@ -30,13 +31,13 @@
             .cartTitle{
                 color: var(--color1);
                 font-size: 20px;
-                font-weight: 700;
+                font-variation-settings: "wght" 700;
             }
     
             .cartPrice{
                 color: var(--color2);
                 font-size: 14px;
-                font-weight: 500;
+                font-variation-settings: "wght" 500;
                 display: flex;
                 align-items: center;
                 margin-bottom: 36px;
@@ -61,7 +62,7 @@
             bottom: 6px;
             font-size: 18px;
             color: var(--color1);
-            font-weight: 700;
+            font-variation-settings: "wght" 700;
         }
     }
 
@@ -108,7 +109,7 @@
                 font-size: 18px;
                 border-radius: 0.7rem;
                 outline: none;
-                font-weight: 600;
+                font-variation-settings: "wght" 600;
                 cursor: pointer;
 
                 &:hover{
@@ -131,7 +132,7 @@
 
     h2{
         font-size: 42px;
-        font-weight: 800;
+        font-variation-settings: "wght" 800;
         color: var(--color1);
         text-shadow: -4px 4px 0px #4f4f4f;
     }

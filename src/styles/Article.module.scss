@@ -23,7 +23,7 @@
 
 .artist{
     font-size: 1.3rem;
-    font-weight: 600;
+    font-variation-settings: "wght" 600;
     color: var(--color2);
 }
 
@@ -41,7 +41,7 @@
 
     span{
         display: flex;
-        font-weight: 400;
+        font-variation-settings: "wght" 400;
         font-size: 1rem;
         padding-left: 10px;
         line-height: 1.8rem;
@@ -50,7 +50,7 @@
     .statick{
         color: var(--color1);
         padding-left: 5px;
-        font-weight: 500;
+        font-variation-settings: "wght" 500;
     }
 }
 
@@ -67,20 +67,22 @@
 
     .postParagraph{
         color: var(--color1);
-        font-weight: 400;
+        font-variation-settings: "wght" 400;
         font-size: 1rem;
+        letter-spacing: -0.5px;
     }
 }
 
-.mycommentWrapper{
+.mycommentWrapper, .commentWrapper{
     width: 100%;
     display: flex;
+}
+
+.mycommentWrapper{
     justify-content: start;
 }
 
 .commentWrapper{
-    width: 100%;
-    display: flex;
     justify-content: end;
 }
 
@@ -114,7 +116,7 @@
         justify-content: space-between;
 
         h2{
-            font-weight: 300;
+            font-variation-settings: "wght" 300;
             color: #ddd;
             font-size: 16px;
             margin-bottom: 8px;
@@ -133,9 +135,8 @@
     .mycommentParagraph{
         text-align: right;
         color: var(--color1);
-        font-weight: 500;
+        font-variation-settings: "wght" 500;
         font-size: 16px;
-        letter-spacing: -0.5px;
     }
 
     .mycommentTime{
@@ -171,13 +172,14 @@
 .commentSection{
     min-height: 64px;
     width: 100%;
-    padding: 10px 22px 12px;
+    padding: 10px 20px 0;
+    border: 2px solid var(--color6);
     background: var(--color6);
     border-radius: 2rem;
     position: relative;
 
     h2{
-        font-weight: 300;
+        font-variation-settings: "wght" 300;
         text-align: left;
         color: var(--color2);
         font-size: 16px;
@@ -190,15 +192,29 @@
         bottom: -6px;
         left: -12px;
         font-size: 32px;
-        transform: scaleX(-1) rotate(-5deg);
+        transform: scaleX(-1) rotate(-4deg);
     }
 
     .commentParagraph{
-        text-align: justify;
+        text-align: right;
         color: var(--color1);
-        font-weight: 500;
+        font-variation-settings: "wght" 500;
         font-size: 16px;
-        letter-spacing: -0.5px;
+    }
+
+    .commentTime{
+        font-size: 12px;
+        color: var(--color2);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: 4px;
+        margin: 10px 0 4px;
+
+        svg{
+            font-size: 8px;
+        }
     }
 }
 
@@ -207,7 +223,7 @@
     padding: 32px 20px;
     color: var(--color1);
     border: 2px solid var(--color7);
-    font-weight: 700;
+    font-variation-settings: "wght" 700;
     margin: 28px auto 0;
     font-size: 20px;
     border-radius: 1rem;
@@ -219,7 +235,7 @@
 
     .cBezar{
         color: var(--color1);
-        font-weight: 700;
+        font-variation-settings: "wght" 700;
         font-size: 28px;
         margin-bottom: 24px;
     }
@@ -227,7 +243,7 @@
     label{
         color: var(--color2);
         font-size: 20px;
-        font-weight: 300;
+        font-variation-settings: "wght" 300;
     }
 
     .input{
@@ -314,7 +330,7 @@
     color: #fff;
     cursor: pointer;
     transition: all 0.2s;
-    font-weight: 700;
+    font-variation-settings: "wght" 700;
     display: flex;
     align-items: center;
     gap: 8px;

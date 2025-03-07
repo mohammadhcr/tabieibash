@@ -18,7 +18,7 @@
 
         h2{
             font-size: 3rem;
-            font-weight: 700;
+            font-variation-settings: "wght" 700;
             color: var(--color1);
         }
 
@@ -26,7 +26,7 @@
             color: var(--color2);
             font-size: 18px;
             line-height: 34px;
-            font-weight: 400;
+            font-variation-settings: "wght" 400;
             margin: 8px 0 24px;
         }
 
@@ -82,7 +82,7 @@
 
         h2{
             font-size: 3rem;
-            font-weight: 700;
+            font-variation-settings: "wght" 700;
             color: var(--color1);
         }
 
@@ -90,7 +90,7 @@
             color: var(--color2);
             font-size: 18px;
             line-height: 34px;
-            font-weight: 400;
+            font-variation-settings: "wght" 400;
             margin: 8px 0 24px;
         }
 
@@ -146,7 +146,7 @@
 
         h1{
             font-size: 5.5rem;
-            font-weight: 900;
+            font-variation-settings: "wght" 900;
             background: var(--color4);
             background: linear-gradient(120deg, var(--color4), var(--color3));
             background-clip: text;
@@ -160,7 +160,7 @@
             font-size: 20px;
             text-align: center;
             line-height: 2rem;
-            font-weight: 400;
+            font-variation-settings: "wght" 400;
         }
 
         .links{
@@ -173,7 +173,7 @@
             border-radius: 1rem;
             background: var(--color4);
             color: var(--color1);
-            font-weight: 600;
+            font-variation-settings: "wght" 600;
             width: 160px;
             height: 60px;
             display: flex;
@@ -195,7 +195,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 400;
+            font-variation-settings: "wght" 400;
 
             &:hover{
                 background: var(--color6);
@@ -217,7 +217,7 @@
     
             p{
                 font-size: 14px;
-                font-weight: 500;
+                font-variation-settings: "wght" 500;
             }
         }
     }
@@ -259,8 +259,8 @@
         flex-direction: column;
         gap: 16px;
         padding: 4rem 18px;
-        border-top: 2px solid var(--color7);
-        border-bottom: 2px solid var(--color7);
+        border-top: 2px solid var(--color6);
+        border-bottom: 2px solid var(--color6);
     
         .title{
             align-items: center;
@@ -297,7 +297,7 @@
         .title{
     
             h1{
-                font-size: 56px;
+                font-size: 52px;
             }
 
             p{
@@ -343,6 +343,8 @@
         flex-direction: column;
         gap: 16px;
         padding: 4rem 42px;
+        border-top: 2px solid var(--color6);
+        border-bottom: 2px solid var(--color6);
     
         .title{
             align-items: center;

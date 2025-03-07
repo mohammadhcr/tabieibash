@@ -20,14 +20,14 @@
             .cardTitle{
                 font-size: 24px;
                 color: var(--color1);
-                font-weight: 800;
+                font-variation-settings: "wght" 800;
                 margin-bottom: 10px;
             }
             
             .cardSubtitle{
                 font-size: 16px;
                 color: var(--color2);
-                font-weight: 400;
+                font-variation-settings: "wght" 400;
                 border-bottom: 1px solid var(--color7);
                 padding-bottom: 14px;
                 margin-bottom: 14px;
@@ -45,7 +45,7 @@
                 .cardP{
                     font-size: 14px;
                     color: var(--color2);
-                    font-weight: 400;
+                    font-variation-settings: "wght" 400;
                     display: flex;
                     align-items: center;
                     gap: 10px;

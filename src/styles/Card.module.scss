@@ -33,14 +33,14 @@
 
         .cardTitle{
             font-size: 18px;
-            font-weight: 600;
+            font-variation-settings: "wght" 600;
             margin-bottom: 38px;
         }
     }
         .goToProduct{
             font-size: 14px;
             color: var(--color1);
-            font-weight: 500;
+            font-variation-settings: "wght" 500;
             opacity: 0;
             position: absolute;
             bottom: -6px;
@@ -64,7 +64,7 @@
         .cardPrice{
             font-size: 18px;
             color: var(--color1);
-            font-weight: 700;
+            font-variation-settings: "wght" 700;
             position: absolute;
             opacity: 1;
             bottom: 0;
@@ -80,94 +80,3 @@
             opacity: 0;
         }
 }
-
-// @media screen and (min-width: 641px) and (max-width: 780px){
-
-//     .cards{
-    
-//         a{
-//             margin-bottom: 2rem;
-//         }
-//     }
-    
-//     .card{
-
-//         .cardPhoto{
-//             width: 130px;
-//             height: 130px;
-
-//             img{
-//                 width: 130px;
-//             }
-//         }
-//     }
-
-// }
-
-// @media screen and (min-width: 481px) and (max-width: 640px){
-
-//     .cards{
-    
-//         a{
-//             margin-bottom: 2rem;
-//         }
-//     }
-    
-//     .card{
-
-//         .cardPhoto{
-//             width: 120px;
-//             height: 120px;
-
-//             img{
-//                 width: 120px;
-//             }
-//         }
-//     }
-
-//     .cardTitle{
-//         font-size: 1.6rem;
-//     }
-
-//     p.cardSubtitle{
-//         font-size: 1rem;
-//     }
-//     .cardP{
-//         display: none;
-//     }
-// }
-
-// @media screen and (min-width: 120px) and (max-width: 480px){
-
-//     .cards{
-    
-//         a{
-//             margin-bottom: 1.5rem;
-//         }
-//     }
-    
-//     .card{
-//         min-width: auto;
-        
-//         .cardPhoto{
-//             width: 100px;
-//             height: 100px;
-
-//             img{
-//                 width: 100px;
-//             }
-//         }
-//     }
-
-//     .cardTitle{
-//         font-size: 1.5rem;
-//     }
-
-//     p.cardSubtitle{
-//         font-size: 1rem;
-//     }
-
-//     .cardP{
-//         display: none;
-//     }
-// }

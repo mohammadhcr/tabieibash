@@ -10,7 +10,7 @@
     h2{
         color: var(--color1);
         font-size: 64px;
-        font-weight: 800;
+        font-variation-settings: "wght" 800;
     }
 
 .zero{
@@ -73,13 +73,13 @@
 
     p{
         font-size: 26px;
-        font-weight: 300;
+        font-variation-settings: "wght" 300;
         color: var(--color2);
     }
 
     a{
         font-size: 18px;
-        font-weight: 600;
+        font-variation-settings: "wght" 600;
         padding: 8px 32px;
         margin: 32px 0;
         border-radius: 14px;
