@@ -3,15 +3,21 @@ import styles from '../styles/AdminSidebar.module.scss'
 
 const AdminSidebar = () => {
 
-    const {menuItems, menuList} = styles
+    const {menuList, mobileMenuList} = styles
 
   return (
+    <>
         <div className={menuList}>
-            <ul className={menuItems}>
-                <Link href="/admin/product"><li>محصول</li></Link>
-                <Link href="/admin/post"><li>مطلب</li></Link>
-            </ul>
+            <span>داشبورد</span>
+            <Link href="/admin/product">محصول</Link>
+            <Link href="/admin/post">مطلب</Link>
         </div>
+        <div className={mobileMenuList}>
+            <Link href="/admin/product">محصول</Link>
+            <hr />
+            <Link href="/admin/post">مطلب</Link>
+        </div>
+    </>
   )
 }
 

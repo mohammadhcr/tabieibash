@@ -1,4 +1,4 @@
-import styles from '../../../styles/Article.module.scss';
+import styles from '../../../styles/Dashboard.module.scss';
 import supabase from '@/supabase';
 import { currentUser } from '@clerk/nextjs/server';
 import type { Metadata } from "next";

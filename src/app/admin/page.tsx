@@ -14,7 +14,7 @@ const Admin = async () => {
 
   return (
     <div className="userWrapper">
-        <h1 className={adminHeader}>سلام {userObj?.username}، به پنل ادمین خوش اومدی.</h1>
+        <h1 className={adminHeader}>سلام {userObj?.username}<br /> به پنل ادمین خوش اومدی.</h1>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '../../../styles/Article.module.scss';
+import styles from '../../../styles/Dashboard.module.scss';
 import supabase from '@/supabase';
 import { useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
