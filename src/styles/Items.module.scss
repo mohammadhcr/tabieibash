@@ -31,14 +31,14 @@
 .cards{
     padding-top: 2rem;
     display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+    grid-template-columns: repeat(5, 1fr);
 }
     
 @media screen and (min-width: 1025px) and (max-width: 1280px){
 
     .itemContainer{
-        padding: 10rem 5rem 4rem;
+        padding: 10rem 4rem 4rem;
     }
 
     .cards{
@@ -50,28 +50,16 @@
 @media screen and (min-width: 781px) and (max-width: 1024px){
     
     .itemContainer{
-        padding: 8rem 4rem 4rem;
-    }
-
-    .cards{
-        gap: 24px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-    
-@media screen and (min-width: 641px) and (max-width: 780px){
-    
-    .itemContainer{
         padding: 8rem 3rem 4rem;
     }
 
     .cards{
         gap: 24px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
     
-@media screen and (min-width: 481px) and (max-width: 640px){
+@media screen and (min-width: 641px) and (max-width: 780px){
     
     .itemContainer{
         padding: 8rem 2rem 4rem;
@@ -79,21 +67,26 @@
 
     .cards{
         gap: 24px;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
     
-@media screen and (min-width: 120px) and (max-width: 480px){
+@media screen and (min-width: 520px) and (max-width: 640px){
     
     .itemContainer{
-        padding: 8rem 20px 4rem;
-        
-        .itemamsedaTitle{
-        
-            h2{
-                font-size: 2.7rem;
-            }
-        }
+        padding: 8rem 2rem 4rem;
+    }
+
+    .cards{
+        gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    
+@media screen and (min-width: 120px) and (max-width: 520px){
+    
+    .itemContainer{
+        padding: 8rem 16px 4rem;
     }
 
     .cards{

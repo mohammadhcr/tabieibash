@@ -16,15 +16,9 @@
 }
 
 .album{
-    font-size: 2.8rem;
+    font-size: 42px;
     font-variation-settings: "wght" 800;
     color: var(--color1);
-}
-
-.artist{
-    font-size: 1.3rem;
-    font-variation-settings: "wght" 600;
-    color: var(--color2);
 }
 
 .description{
@@ -33,24 +27,58 @@
     font-size: 1.2rem;
     color: var(--color2);
     margin: 2rem 0;
-    padding: 1rem;
+    padding: 12px 18px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 12px;
 
-    span{
+    .upThere{
         display: flex;
-        font-variation-settings: "wght" 400;
-        font-size: 1rem;
-        padding-left: 10px;
-        line-height: 1.8rem;
+        flex-wrap: wrap;
+        border-bottom: 2px solid var(--color7);
+        padding-bottom: 12px;
+        width: 100%;
+
+        span{
+            display: flex;
+            font-variation-settings: "wght" 400;
+            font-size: 1rem;
+            padding-left: 10px;
+            line-height: 1.8rem;
+        }
+
+        .statick{
+            color: var(--color1);
+            padding-left: 5px;
+            font-variation-settings: "wght" 500;
+        }
     }
 
-    .statick{
+    .downThere{
+        display: flex;
+        align-items: center;
+        gap: 36px;
         color: var(--color1);
-        padding-left: 5px;
-        font-variation-settings: "wght" 500;
+        height: 32px;
+
+        form{
+            display: flex;
+        }
+
+        .commentIcon, .likeIcon{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 16px;
+        }
+
+        .commentIcon svg{
+            font-size: 30px;
+        }
     }
 }
 
@@ -387,11 +415,7 @@
     }
 
     .album{
-        font-size: 2.5rem;
-    }
-
-    .artist{
-        font-size: 1.5rem;
+        font-size: 36px;
     }
 }
     
@@ -414,11 +438,7 @@
     }
 
     .album{
-        font-size: 2.5rem;
-    }
-
-    .artist{
-        font-size: 1.5rem;
+        font-size: 36px;
     }
 }
     
@@ -447,9 +467,5 @@
 
     .album{
         font-size: 28px;
-    }
-
-    .artist{
-        font-size: 1.2rem;
     }
 }

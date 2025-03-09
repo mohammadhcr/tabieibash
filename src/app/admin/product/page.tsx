@@ -19,13 +19,11 @@ const ProductAdmin = () => {
 
     setLoading(true)
 
-    const fileExt = imageFile!.name.split(".").pop();
-    const fileName = `${Date.now()}.${fileExt}`
-    const filePath = `${fileName}`;
+    const fileName = `${Date.now()}-${imageFile!.name}`
 
-    await supabase.storage.from("products").upload(filePath, imageFile!);
+    await supabase.storage.from("products").upload(fileName, imageFile!);
 
-    const { data: publicUrlData } = supabase.storage.from("products").getPublicUrl(filePath);
+    const { data: publicUrlData } = supabase.storage.from("products").getPublicUrl(fileName);
     const imageUrl = publicUrlData.publicUrl;
 
     const newProduct = {
@@ -43,6 +41,7 @@ const ProductAdmin = () => {
     setProductPrice("")
     setProductSlug("")
     setImageFile(null)
+    setLoading(false)
 
     }
 

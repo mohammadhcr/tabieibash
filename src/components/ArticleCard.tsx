@@ -7,7 +7,7 @@ const ArticleCard = (
         title,
         body,
         tags,
-        slug
+        slug,
     }:    
     {
         title: string
@@ -17,15 +17,17 @@ const ArticleCard = (
     }    
 ) => {
 
-    const desc = body.slice(0, 256) + '...'
+    const desc = body.slice(0, 236) + '...'
 
-    const {card, cardTitle, cardSubtitle, cardP, hashtag, readSection, datas} = styles;
+    const {card, cardTitle, cardSubtitle, cardP, hashtag, readSection, datas, cardContent} = styles;
 
     return (
         <Link href={`/blog/${slug}`}>
             <div className={card}>
-                <h2 className={cardTitle}>{title}</h2>
-                <h2 className={cardSubtitle}>{desc}</h2>
+                <div className={cardContent}>
+                    <h2 className={cardTitle}>{title}</h2>
+                    <p className={cardSubtitle}>{desc}</p>
+                </div>
                 <div className={datas}>
                     <span className={cardP}>
                         <FaHashtag className={hashtag} />

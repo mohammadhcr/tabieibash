@@ -16,12 +16,12 @@ interface Article {
     tags: string[]
     slug: string
     likes: number
-    comments: number
+    photo: string
 }
 
 const Articles = async () => {
 
-    const { data } = await supabase.from('posts').select('*')
+    const { data } = await supabase.from('posts').select('*').order('id', { ascending: false })
 
     const {itemContainer, itemText, itemTitle, cards} = styles;
 

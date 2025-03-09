@@ -187,6 +187,27 @@
     }
 }
 
+.redlike, .outlinelike{
+    transition: all 0.1s;
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+
+    .btnLoader{
+        width: 30px;
+        height: 30px;
+        border: 3px solid #fff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        animation: rotation 1s linear infinite;
+    }
+}
+
+.outlinelike:hover{
+    color: #f54e42;
+}
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);

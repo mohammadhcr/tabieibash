@@ -27,7 +27,7 @@ const Cart = async () => {
 
     const user = await auth()
 
-    const { data: cartItems } = await supabase.from('cart').select('*').eq('user', user.userId)
+    const { data: cartItems } = await supabase.from('cart').select('*').eq('user', user.userId).order('id', { ascending: true })
 
     const plusQuantity = async (formData: FormData) => {
         'use server'

@@ -1,17 +1,17 @@
 import styles from '../../../styles/Article.module.scss';
 import { FaMoon } from "react-icons/fa6";
 import supabase from '@/supabase';
-import { FaArrowCircleUp } from "react-icons/fa";
+import { FaArrowCircleUp, FaRegTrashAlt, FaRegComment, FaRegHeart } from "react-icons/fa";
 import { revalidateTag } from 'next/cache';
 import { currentUser } from '@clerk/nextjs/server';
 import { SignedIn, SignedOut } from '@clerk/nextjs';
 import Image from 'next/image';
-import { FaRegTrashAlt } from "react-icons/fa";
 import type { Metadata } from "next";
 import { Suspense } from 'react';
 import Loading from '@/app/loading';
 import SubmitButton from '@/components/SubmitButton';
 import { GoDotFill } from 'react-icons/go';
+import { FcLike } from "react-icons/fc";
 
 export const metadata: Metadata = {
   title: "سینگل پست | طبیعی باش",
@@ -32,9 +32,15 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
 
     const { slug } = await params;
 
+    const userObj = await currentUser()
+
     const { data: blogpost } = await supabase.from('posts').select('*').eq('slug', slug).single()
     
     const { data: blogcomments } = await supabase.from('comments').select('*').eq('postslug', slug)
+
+    const { data: bloglikes } = await supabase.from('likes').select('*').eq('postslug', slug)
+
+    const { data: userlike } = await supabase.from('likes').select('*').eq('postslug', slug).eq('uid', userObj?.id)
 
     const d = new Date(blogpost.created_at)
 
@@ -52,7 +58,26 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
         return finalTime
     }
 
-    const userObj = await currentUser()
+    const Like = async () => {
+        'use server'
+
+        const newLike = {
+            uid: userObj?.id,
+            postslug: slug,
+        }
+
+        await supabase.from('likes').insert([newLike]).single()
+
+        revalidateTag('likes')
+    }
+
+    const UnLike = async () => {
+        'use server'
+
+        await supabase.from('likes').delete().eq('postslug', slug).eq('uid', userObj?.id)
+
+        revalidateTag('likes')
+    }
 
     const addComment = async (formData: FormData) => {
         'use server'
@@ -82,7 +107,7 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
         revalidateTag('comments')
     }
 
-    const {wrapper, info, album, description, statick, post, postParagraph, textInput, commentContainer, commentTime, mycommentTime, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, cBezar, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
+    const {wrapper, info, album, description, statick, post, postParagraph, textInput, likeIcon, upThere, downThere, commentIcon, commentContainer, commentTime, mycommentTime, mycommentUserName, commentWrapper, mycommentWrapper, commentParagraph, moon, commentInput, cBezar, cBezarOut, commentSection, mycommentContainer, mycommentParagraph, mycommentSection, mymoon} = styles;
     
     return (
         <Suspense fallback={<Loading />}>
@@ -90,22 +115,39 @@ const Article = async ({params}: {params: Promise<{slug: string}>}) => {
                 <div className={info}>
                     <h2 className={album}>{blogpost.title}</h2>
                     <div className={description}>
-                        <span>
-                            <span className={statick}>دسته‌بندی:</span>
-                            {blogpost.tags}
-                        </span>
-                        <span>
-                            <span className={statick}>تاریخ انتشار:</span>
-                            {formattedDate}
-                        </span>
-                        <span>
-                            <span className={statick}>نویسنده:</span>
-                            {blogpost.author}
-                        </span>
-                        <span>
-                            <span className={statick}>کامنت‌ها:</span>
-                            {blogcomments?.length.toLocaleString('fa-IR')}
-                        </span>
+                        <div className={upThere}>
+                            <span>
+                                <span className={statick}>دسته‌بندی:</span>
+                                {blogpost.tags}
+                            </span>
+                            <span>
+                                <span className={statick}>تاریخ انتشار:</span>
+                                {formattedDate}
+                            </span>
+                            <span>
+                                <span className={statick}>نویسنده:</span>
+                                {blogpost.author}
+                            </span>
+                        </div>
+                        <div className={downThere}>
+                            <span className={likeIcon}>
+                                {userlike?.length
+                                    ?
+                                    <form action={UnLike}>
+                                        <SubmitButton classname='redlike'><FcLike /></SubmitButton>
+                                    </form>
+                                    :
+                                    <form action={Like}>
+                                        <SubmitButton classname='outlinelike'><FaRegHeart /></SubmitButton>
+                                    </form>
+                                }
+                                {bloglikes?.length.toLocaleString('fa-IR')}
+                            </span>
+                            <span className={commentIcon}>
+                                <FaRegComment />
+                                {blogcomments?.length.toLocaleString('fa-IR')}
+                            </span>
+                        </div>
                     </div>
                     <div className={post}>
                         <p className={postParagraph}>{blogpost.body}</p>
