@@ -1,14 +1,14 @@
 import AdminSidebar from "@/components/AdminSidebar";
 
 export default function AdminLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
+    return (
         <>
             <AdminSidebar />
             {children}
         </>
-  )
+    );
 }

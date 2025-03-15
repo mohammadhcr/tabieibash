@@ -1,11 +1,11 @@
-export {}
+export {};
 
-export type Roles = "admin" | "member" | null
+export type Roles = "admin" | "member" | null;
 
 declare global {
     interface CustomSessionClaims {
         metadata: {
-            role?: Roles
-        }
+            role?: Roles;
+        };
     }
 }

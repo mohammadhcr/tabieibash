@@ -1,4 +1,4 @@
-.card{
+.card {
     background-size: contain;
     background-repeat: no-repeat;
     width: 240px;
@@ -10,7 +10,7 @@
     justify-content: flex-start;
     position: relative;
 
-    .cardP{
+    .cardP {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -18,30 +18,31 @@
         align-items: center;
         justify-content: center;
 
-        span{
+        span {
+            display: flex;
             padding: 18px;
             border-radius: 2rem;
             background: var(--color8);
             opacity: 0;
 
-            .playIcon{
+            .playIcon {
                 font-size: 10px;
                 color: #fafafa;
             }
         }
     }
 
-    &:hover .cardP span{
+    &:hover .cardP span {
         background: var(--color8);
         opacity: 1;
     }
 
-    &:hover .cardP span .playIcon{
+    &:hover .cardP span .playIcon {
         font-size: 24px;
     }
 }
-    
-.cardContent{
+
+.cardContent {
     padding: 0 6px;
     text-align: center;
     width: 100%;
@@ -52,16 +53,20 @@
     justify-content: flex-end;
     gap: 2px;
     border-radius: 0 0 0.8rem 0.8rem;
-    background: linear-gradient(0deg, rgba(15,15,15,0.92) 0%, rgba(15,15,15,0) 50%);
-}
-    
-.cardTitle{
-    font-size: 20px;
-    font-variation-settings: "wght" 800;
+    background: linear-gradient(
+        0deg,
+        rgba(15, 15, 15, 0.92) 0%,
+        rgba(15, 15, 15, 0) 50%
+    );
 }
 
-p.cardSubtitle{
+.cardTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p.cardSubtitle {
     font-size: 14px;
-    font-variation-settings: "wght" 400;
+    font-weight: 500;
     margin-bottom: 16px;
 }

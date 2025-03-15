@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: start;
     justify-content: center;
@@ -10,18 +10,18 @@
     user-select: none;
 }
 
-.info{
+.info {
     width: 100%;
     color: var(--color1);
 }
 
-.album{
+.album {
     font-size: 42px;
-    font-variation-settings: "wght" 800;
+    font-weight: 700;
     color: var(--color1);
 }
 
-.description{
+.description {
     background: var(--color6);
     border-radius: 1rem;
     font-size: 1.2rem;
@@ -34,55 +34,52 @@
     flex-wrap: wrap;
     gap: 12px;
 
-    .upThere{
+    .upThere {
         display: flex;
         flex-wrap: wrap;
         border-bottom: 2px solid var(--color7);
         padding-bottom: 12px;
         width: 100%;
 
-        span{
+        span {
             display: flex;
-            font-variation-settings: "wght" 400;
+            font-weight: 400;
             font-size: 1rem;
             padding-left: 10px;
             line-height: 1.8rem;
         }
 
-        .statick{
+        .statick {
             color: var(--color1);
             padding-left: 5px;
-            font-variation-settings: "wght" 500;
+            font-weight: 500;
         }
     }
 
-    .downThere{
+    .downThere {
         display: flex;
         align-items: center;
         gap: 36px;
         color: var(--color1);
         height: 32px;
 
-        form{
-            display: flex;
-        }
-
-        .commentIcon, .likeIcon{
+        .commentIcon,
+        .likeIcon {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             gap: 12px;
             font-size: 16px;
-        }
 
-        .commentIcon svg{
-            font-size: 30px;
+            svg {
+                font-size: 30px;
+            }
         }
     }
 }
 
-.post{
+.post {
     height: auto;
     width: 100%;
     padding: 1rem 1.5rem;
@@ -93,34 +90,34 @@
     text-align: justify;
     margin-bottom: 16px;
 
-    .postParagraph{
+    .postParagraph {
         color: var(--color1);
-        font-variation-settings: "wght" 400;
+        font-weight: 400;
         font-size: 1rem;
-        letter-spacing: -0.5px;
     }
 }
 
-.mycommentWrapper, .commentWrapper{
+.mycommentWrapper,
+.commentWrapper {
     width: 100%;
     display: flex;
 }
 
-.mycommentWrapper{
+.mycommentWrapper {
     justify-content: start;
 }
 
-.commentWrapper{
+.commentWrapper {
     justify-content: end;
 }
 
-.mycommentContainer{
+.mycommentContainer {
     position: relative;
     padding-right: 2.3rem;
     min-width: 260px;
     margin: 18px 0;
-    
-    img{
+
+    img {
         position: absolute;
         width: 2rem;
         bottom: 0;
@@ -129,7 +126,7 @@
     }
 }
 
-.mycommentSection{
+.mycommentSection {
     min-height: 64px;
     width: 100%;
     padding: 12px 20px 0;
@@ -138,20 +135,20 @@
     border-radius: 2rem;
     position: relative;
 
-    .mycommentUserName{
+    .mycommentUserName {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        h2{
-            font-variation-settings: "wght" 300;
+        h2 {
+            font-weight: 300;
             color: #ddd;
             font-size: 16px;
             margin-bottom: 8px;
         }
     }
 
-    .mymoon{
+    .mymoon {
         position: absolute;
         fill: var(--color8);
         bottom: -6px;
@@ -160,14 +157,14 @@
         transform: rotate(4deg);
     }
 
-    .mycommentParagraph{
+    .mycommentParagraph {
         text-align: right;
         color: var(--color1);
-        font-variation-settings: "wght" 500;
+        font-weight: 500;
         font-size: 16px;
     }
 
-    .mycommentTime{
+    .mycommentTime {
         font-size: 12px;
         color: #ccc;
         display: flex;
@@ -177,19 +174,19 @@
         gap: 4px;
         margin: 8px 0 4px;
 
-        svg{
+        svg {
             font-size: 8px;
         }
     }
 }
 
-.commentContainer{
+.commentContainer {
     position: relative;
     padding-left: 2.3rem;
     min-width: 260px;
     margin: 18px 0;
-    
-    img{
+
+    img {
         position: absolute;
         bottom: 0;
         left: -4px;
@@ -197,7 +194,7 @@
     }
 }
 
-.commentSection{
+.commentSection {
     min-height: 64px;
     width: 100%;
     padding: 10px 20px 0;
@@ -206,15 +203,15 @@
     border-radius: 2rem;
     position: relative;
 
-    h2{
-        font-variation-settings: "wght" 300;
+    h2 {
+        font-weight: 300;
         text-align: left;
         color: var(--color2);
         font-size: 16px;
         padding-bottom: 8px;
     }
 
-    .moon{
+    .moon {
         position: absolute;
         fill: var(--color6);
         bottom: -6px;
@@ -223,14 +220,14 @@
         transform: scaleX(-1) rotate(-4deg);
     }
 
-    .commentParagraph{
+    .commentParagraph {
         text-align: right;
         color: var(--color1);
-        font-variation-settings: "wght" 500;
+        font-weight: 500;
         font-size: 16px;
     }
 
-    .commentTime{
+    .commentTime {
         font-size: 12px;
         color: var(--color2);
         display: flex;
@@ -240,41 +237,41 @@
         gap: 4px;
         margin: 10px 0 4px;
 
-        svg{
+        svg {
             font-size: 8px;
         }
     }
 }
 
-.cBezarOut{
+.cBezarOut {
     background: var(--color6);
     padding: 32px 20px;
     color: var(--color1);
     border: 2px solid var(--color7);
-    font-variation-settings: "wght" 700;
+    font-weight: 600;
     margin: 28px auto 0;
     font-size: 20px;
     border-radius: 1rem;
 }
 
-.commentInput{
+.commentInput {
     width: 100%;
     margin: 36px auto 0;
 
-    .cBezar{
+    .cBezar {
         color: var(--color1);
-        font-variation-settings: "wght" 700;
+        font-weight: 600;
         font-size: 28px;
         margin-bottom: 24px;
     }
 
-    label{
+    label {
         color: var(--color2);
         font-size: 20px;
-        font-variation-settings: "wght" 300;
+        font-weight: 300;
     }
 
-    .input{
+    .input {
         background: var(--color6);
         width: 100%;
         margin: 6px 0 18px;
@@ -286,49 +283,49 @@
         font-size: 20px;
         color: var(--color1);
 
-        &:hover{
+        &:hover {
             border: 2px solid var(--color7);
         }
 
-        &::placeholder{
+        &::placeholder {
             font-size: 22px;
         }
-}
+    }
 
-    .slugInput{
+    .slugInput {
         direction: ltr;
     }
 
-    .authorInput{
+    .authorInput {
         direction: ltr;
         color: var(--color3);
     }
 
-    .textInput{
-            background: var(--color6);
-            width: 100%;
-            margin-top: 12px;
-            min-height: 280px;
-            max-height: 280px;
-            height: 280px;
-            border: 2px solid var(--color6);
-            outline: none;
-            border-radius: 14px;
-            padding: 0.5rem;
-            font-size: 20px;
-            color: var(--color1);
+    .textInput {
+        background: var(--color6);
+        width: 100%;
+        margin-top: 12px;
+        min-height: 280px;
+        max-height: 280px;
+        height: 280px;
+        border: 2px solid var(--color6);
+        outline: none;
+        border-radius: 14px;
+        padding: 0.5rem;
+        font-size: 20px;
+        color: var(--color1);
 
-            &:hover{
-                border: 2px solid var(--color7);
-            }
+        &:hover {
+            border: 2px solid var(--color7);
+        }
 
-            &::placeholder{
-                font-size: 22px;
-                color: var(--color2);
-            }
+        &::placeholder {
+            font-size: 22px;
+            color: var(--color2);
+        }
     }
 
-    .fileInput{
+    .fileInput {
         background: var(--color6);
         direction: ltr;
         width: 100%;
@@ -342,13 +339,13 @@
         color: var(--color2);
         cursor: pointer;
 
-            &:hover{
-                border: 2px solid var(--color7);
-            }
+        &:hover {
+            border: 2px solid var(--color7);
+        }
     }
 }
 
-.submit{
+.submit {
     max-width: 520px;
     width: 100%;
     height: 58px;
@@ -358,18 +355,18 @@
     color: #fff;
     cursor: pointer;
     transition: all 0.2s;
-    font-variation-settings: "wght" 700;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 8px;
     justify-content: center;
     border-radius: 16px;
 
-    svg{
+    svg {
         font-size: 20px;
     }
 
-    .btnLoader{
+    .btnLoader {
         width: 28px;
         height: 28px;
         border: 2px solid #fff;
@@ -379,7 +376,7 @@
         animation: rotation 1s linear infinite;
     }
 
-    &:hover{
+    &:hover {
         background: var(--color10);
     }
 }
@@ -392,80 +389,80 @@
         transform: rotate(360deg);
     }
 }
-   
-@media screen and (min-width: 781px) and (max-width: 1024px){
-    .wrapper{
+
+@media screen and (min-width: 781px) and (max-width: 1024px) {
+    .wrapper {
         padding: 6rem 36px;
         width: 100%;
     }
 }
-    
-@media screen and (min-width: 641px) and (max-width: 780px){
-    .wrapper{
+
+@media screen and (min-width: 641px) and (max-width: 780px) {
+    .wrapper {
         padding: 6rem 36px;
         width: 100%;
     }
 
-    .artwork{
+    .artwork {
         width: 70%;
     }
 
-    .info{
+    .info {
         width: 100%;
     }
 
-    .album{
+    .album {
         font-size: 36px;
     }
 }
-    
-@media screen and (min-width: 481px) and (max-width: 640px){
-    .wrapper{
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+    .wrapper {
         padding: 6rem 32px;
         width: 100%;
     }
 
-    .description{
+    .description {
         margin: 1rem 0;
     }
 
-    .artwork{
+    .artwork {
         width: 80%;
     }
 
-    .info{
+    .info {
         width: 100%;
     }
 
-    .album{
+    .album {
         font-size: 36px;
     }
 }
-    
-@media screen and (min-width: 120px) and (max-width: 480px){
-    .wrapper{
+
+@media screen and (min-width: 120px) and (max-width: 480px) {
+    .wrapper {
         padding: 6rem 16px;
         width: 100%;
     }
 
-    .description{
+    .description {
         margin: 1rem 0;
     }
 
-    .artwork{
+    .artwork {
         width: 90%;
         margin-bottom: 1rem;
     }
 
-    .info{
+    .info {
         width: 100%;
     }
 
-    .post{
+    .post {
         padding: 1rem;
     }
 
-    .album{
+    .album {
         font-size: 28px;
     }
 }

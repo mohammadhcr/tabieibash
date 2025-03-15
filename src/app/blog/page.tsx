@@ -1,29 +1,31 @@
-import supabase from '@/supabase';
-import ArticleCard from '../../components/ArticleCard';
-import Footer from '../../components/Footer';
-import styles from '../../styles/BlogItems.module.scss';
+import supabase from "@/supabase";
+import ArticleCard from "../../components/ArticleCard";
+import Footer from "../../components/Footer";
+import styles from "../../styles/BlogItems.module.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "بـلاگ | طبیعی باش",
+    title: "بـلاگ | طبیعی باش",
 };
 
 interface Article {
-    id: number
-    title: string
-    author: string
-    body: string
-    tags: string[]
-    slug: string
-    likes: number
-    photo: string
+    id: number;
+    title: string;
+    author: string;
+    body: string;
+    tags: string[];
+    slug: string;
+    likes: number;
+    photo: string;
 }
 
 const Articles = async () => {
+    const { data } = await supabase
+        .from("posts")
+        .select("*")
+        .order("id", { ascending: false });
 
-    const { data } = await supabase.from('posts').select('*').order('id', { ascending: false })
-
-    const {itemContainer, itemText, itemTitle, cards} = styles;
+    const { itemContainer, itemText, itemTitle, cards } = styles;
 
     return (
         <>
@@ -33,7 +35,9 @@ const Articles = async () => {
                     <p className={itemText}>مقالات، نقد و بررسی و خواندنی‌ها</p>
                 </div>
                 <div className={cards}>
-                    {data!.map((article: Article) => <ArticleCard {...article} key={article.id} />)}
+                    {data!.map((article: Article) => (
+                        <ArticleCard {...article} key={article.id} />
+                    ))}
                 </div>
             </div>
             <Footer />

@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,22 +9,22 @@
     user-select: none;
 }
 
-.artwork{
+.artwork {
     width: 40%;
     height: auto;
-    
-    img{
+
+    img {
         width: 100%;
         height: auto;
         border-radius: 1rem;
     }
 }
 
-.section{
+.section {
     width: 50%;
 }
 
-.info{
+.info {
     width: 100%;
     color: var(--color1);
     border: 2px solid var(--color7);
@@ -33,30 +33,30 @@
     background: var(--color6);
 }
 
-.podcastInfo{
+.podcastInfo {
     line-height: 1.8rem;
 }
 
-.episodeDesc{
-    font-variation-settings: "wght" 500;
+.episodeDesc {
+    font-weight: 500;
     color: var(--color1);
     font-size: 1rem;
 }
 
-.album{
+.album {
     font-size: 3rem;
-    font-variation-settings: "wght" 700;
+    font-weight: 700;
     color: var(--color1);
 }
 
-.artist{
+.artist {
     font-size: 1.8rem;
-    font-variation-settings: "wght" 500;
+    font-weight: 500;
     color: var(--color2);
     padding: 1.5rem 0;
 }
 
-.description{
+.description {
     font-size: 1.2rem;
     color: var(--color2);
     margin: 1rem 0;
@@ -65,31 +65,31 @@
     flex-direction: column;
     align-items: flex-start;
 
-    span{
+    span {
         display: flex;
         font-size: 1.1rem;
-        font-variation-settings: "wght" 400;
+        font-weight: 400;
         line-height: 2rem;
     }
 
-    .statick{
+    .statick {
         color: var(--color1);
         padding-left: 5px;
-        font-variation-settings: "wght" 600;
+        font-weight: 600;
     }
 }
 
-.avai{
-    font-variation-settings: "wght" 600;
+.avai {
+    font-weight: 600;
     color: var(--color1);
     font-size: 24px;
 }
 
-.listen{
+.listen {
     margin: 24px 0 16px;
 }
 
-.links{
+.links {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -98,44 +98,44 @@
     gap: 24px;
     margin: 16px 0;
 
-    .soundCloud{
+    .soundCloud {
         color: #ff3300;
 
-        &:hover{
+        &:hover {
             background: #ff330022;
         }
     }
 
-    .youtube{
+    .youtube {
         color: #ff0033;
 
-        &:hover{
+        &:hover {
             background: #ff003322;
         }
     }
 
-    .spotify{
-        color: #1DB954;
+    .spotify {
+        color: #1db954;
 
-        &:hover{
-            background: #1DB95422;
+        &:hover {
+            background: #1db95422;
         }
     }
 
-    .applePod{
+    .applePod {
         color: #fb4b64;
 
-        &:hover{
+        &:hover {
             background: #fb4b6422;
         }
     }
-    
-    a{
+
+    a {
         width: 128px;
         border-radius: 0.7rem;
         margin: 12px 0 0;
         height: 120px;
-        font-variation-settings: "wght" 600;
+        font-weight: 600;
         padding: 12px 0 6px;
         font-size: 20px;
         display: flex;
@@ -145,122 +145,122 @@
         transition: all 0.2s;
     }
 
-    .platformIcon{
+    .platformIcon {
         font-size: 64px;
     }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1600px){
-    .wrapper{
+@media screen and (min-width: 1281px) and (max-width: 1600px) {
+    .wrapper {
         padding: 4rem 4rem 0;
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px){
-    .wrapper{
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .wrapper {
         padding: 4rem 3rem 0;
     }
 }
-   
-@media screen and (min-width: 781px) and (max-width: 1024px){
-    .wrapper{
+
+@media screen and (min-width: 781px) and (max-width: 1024px) {
+    .wrapper {
         padding: 4rem 2rem 0;
     }
 }
-    
-@media screen and (min-width: 641px) and (max-width: 780px){
-    .wrapper{
+
+@media screen and (min-width: 641px) and (max-width: 780px) {
+    .wrapper {
         flex-direction: column;
         padding: 4rem 4rem;
     }
 
-    .artwork{
+    .artwork {
         width: 100%;
         padding: 4rem 0 3rem;
     }
 
-    .section{
+    .section {
         width: 100%;
     }
 
-    .album{
+    .album {
         font-size: 2.5rem;
     }
 
-    .artist{
+    .artist {
         font-size: 1.5rem;
         padding: 1rem 0;
     }
 
-    .description{
+    .description {
         font-size: 1.1rem;
         margin: 1rem 0;
         padding: 1rem 0;
     }
 }
-    
-@media screen and (min-width: 481px) and (max-width: 640px){
-    .wrapper{
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+    .wrapper {
         flex-direction: column;
         padding: 4rem 3rem;
     }
 
-    .artwork{
+    .artwork {
         width: 100%;
         padding: 3rem 0 2rem;
     }
 
-    .section{
+    .section {
         width: 100%;
     }
 
-    .album{
+    .album {
         font-size: 2.5rem;
     }
 
-    .artist{
+    .artist {
         font-size: 1.5rem;
         padding: 1rem 0;
     }
 
-    .description{
+    .description {
         font-size: 1rem;
         margin: 1rem 0;
         padding: 1rem 0;
     }
 }
-    
-@media screen and (min-width: 120px) and (max-width: 480px){
-    .wrapper{
+
+@media screen and (min-width: 120px) and (max-width: 480px) {
+    .wrapper {
         flex-direction: column;
         padding: 4rem 1rem 6rem;
     }
 
-    .artwork{
+    .artwork {
         width: 100%;
         padding: 2rem 0 1rem;
     }
 
-    .section{
+    .section {
         width: 100%;
     }
 
-    .album{
+    .album {
         font-size: 36px;
     }
 
-    .artist{
+    .artist {
         font-size: 22px;
         padding: 14px 0 10px;
     }
 
-    .description{
+    .description {
         font-size: 1rem;
         margin: 1rem 0;
         padding: 1rem 0;
     }
 
-    .info{
+    .info {
         padding: 1.5rem 1rem 0;
     }
 }

@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,49 +10,51 @@
     gap: 64px;
 }
 
-.photo{
+.photo {
     width: 35%;
     height: auto;
-    
-    img{
+
+    img {
         border-radius: 1rem;
+        width: 100%;
+        height: 100%;
     }
 }
 
-.section{
+.section {
     width: 40%;
     border: 2px solid var(--color6);
     padding: 16px;
     border-radius: 1rem;
 }
 
-.info{
+.info {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.title{
+.title {
     font-size: 30px;
-    font-variation-settings: "wght" 800;
+    font-weight: 700;
     color: var(--color1);
 }
 
-.category{
+.category {
     font-size: 24px;
-    font-variation-settings: "wght" 600;
+    font-weight: 600;
     color: var(--color2);
     padding: 4px 0 16px;
 }
 
-.productDesc{
-    font-variation-settings: "wght" 300;
+.productDesc {
+    font-weight: 300;
     color: var(--color1);
     font-size: 16px;
     line-height: 28px;
 }
 
-.buySection{
+.buySection {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,19 +66,19 @@
     padding: 16px 0;
     gap: 18px;
 
-    .price{
+    .price {
         color: var(--color1);
-        font-variation-settings: "wght" 700;
+        font-weight: 600;
         font-size: 28px;
 
-        .prePrice{
+        .prePrice {
             color: var(--color2);
             font-size: 22px;
         }
     }
 
-    .existed{
-        font-variation-settings: "wght" 700;
+    .existed {
+        font-weight: 600;
         font-size: 16px;
         color: var(--color8);
         width: 240px;
@@ -88,14 +90,14 @@
         justify-content: center;
         gap: 6px;
 
-        svg{
+        svg {
             font-size: 18px;
         }
     }
 }
 
-.shopOut{
-    font-variation-settings: "wght" 700;
+.shopOut {
+    font-weight: 600;
     text-align: center;
     font-size: 14px;
     color: var(--color1);
@@ -106,70 +108,70 @@
     margin-top: 12px;
 }
 
-@media screen and (min-width: 781px) and (max-width: 1024px){
-    .wrapper{
+@media screen and (min-width: 781px) and (max-width: 1024px) {
+    .wrapper {
         flex-direction: column;
         padding: 4rem 6rem;
         gap: 32px;
     }
 
-    .photo{
+    .photo {
         width: 100%;
         padding-top: 3rem;
     }
 
-    .section{
+    .section {
         width: 100%;
     }
 }
-    
-@media screen and (min-width: 641px) and (max-width: 780px){
-    .wrapper{
+
+@media screen and (min-width: 641px) and (max-width: 780px) {
+    .wrapper {
         flex-direction: column;
         padding: 4rem;
         gap: 32px;
     }
 
-    .photo{
+    .photo {
         width: 100%;
         padding-top: 3rem;
     }
 
-    .section{
+    .section {
         width: 100%;
     }
 }
-    
-@media screen and (min-width: 481px) and (max-width: 640px){
-    .wrapper{
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+    .wrapper {
         flex-direction: column;
         padding: 4rem 2rem;
         gap: 32px;
     }
 
-    .photo{
+    .photo {
         width: 100%;
         padding-top: 3rem;
     }
 
-    .section{
+    .section {
         width: 100%;
     }
 }
-    
-@media screen and (min-width: 120px) and (max-width: 480px){
-    .wrapper{
+
+@media screen and (min-width: 120px) and (max-width: 480px) {
+    .wrapper {
         flex-direction: column;
         padding: 4rem 1rem 6rem;
         gap: 32px;
     }
 
-    .photo{
+    .photo {
         width: 100%;
         padding-top: 2rem;
     }
 
-    .section{
+    .section {
         width: 100%;
     }
 }

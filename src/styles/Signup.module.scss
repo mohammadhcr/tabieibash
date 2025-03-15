@@ -1,43 +1,43 @@
-.sForm{
+.sForm {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    padding: 2rem 0;
+    padding: 3rem 0;
     justify-content: center;
     align-items: center;
     background: var(--color5);
 }
 
-.title{
+.title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 12px;
 
-    img{
+    img {
         width: 64px;
         height: 64px;
     }
 
-    h1{
+    h1 {
         cursor: default;
         font-size: 32px;
         color: var(--color1);
         user-select: none;
-        font-variation-settings: "wght" 800;
+        font-weight: 800;
     }
 
-    p{
+    p {
         cursor: default;
         font-size: 15px;
         color: var(--color2);
         user-select: none;
-        font-variation-settings: "wght" 500;
+        font-weight: 500;
     }
 }
 
-.signup{
+.signup {
     display: flex;
     flex-direction: column;
     background: var(--color5);
@@ -47,25 +47,25 @@
     border-radius: 1rem;
 }
 
-.inputs{
+.inputs {
     display: flex;
     flex-direction: column;
     margin: 26px 0 4px;
     gap: 22px;
 
-    .input{
+    .input {
         display: flex;
         flex-direction: column;
 
-        .placeholder{
+        .placeholder {
             font-size: 1rem;
             user-select: none;
             color: var(--color2);
             padding-bottom: 0.5rem;
-            font-variation-settings: "wght" 400;
+            font-weight: 400;
         }
 
-        div{
+        div {
             padding: 0 8px;
             height: 44px;
             display: flex;
@@ -76,27 +76,31 @@
             color: var(--color1);
             align-items: center;
 
-            &:hover{
+            &:hover {
                 border: 2px solid var(--color7);
             }
 
-            .bxlp{
+            &:has(input:focus, input:active, input:focus-visible) {
+                border: 2px solid var(--color7);
+            }
+
+            .bxlp {
                 cursor: pointer;
                 font-size: 32px;
                 padding: 4px;
                 border-radius: 10px;
                 color: var(--color2);
 
-                &:hover{
+                &:hover {
                     background: var(--color7);
                 }
             }
 
-            .bxlpActive{
+            .bxlpActive {
                 color: var(--color1);
             }
 
-            input{
+            input {
                 font-size: 20px;
                 padding: 0 10px;
                 direction: ltr;
@@ -105,9 +109,10 @@
                 border: none;
                 color: var(--color1);
                 background: var(--color6);
+                font-family: Arial;
             }
 
-            .verifyCode{
+            .verifyCode {
                 text-align: center;
                 font-size: 24px;
             }
@@ -115,42 +120,43 @@
     }
 }
 
-.errMsg{
+.errMsg {
     font-size: 12px;
     text-align: center;
     height: 26px;
     user-select: none;
     color: #ff3e3e;
     direction: ltr;
-    font-variation-settings: "wght" 300;
+    font-weight: 300;
 }
 
-.errMsgCode{
+.errMsgCode {
     font-size: 18px;
     text-align: center;
     height: 26px;
     user-select: none;
     color: #ff3e3e;
     direction: ltr;
-    font-variation-settings: "wght" 300;
+    font-weight: 300;
 }
 
-.submitB button{
+.submitB button {
     width: 100%;
     height: 56px;
     margin: 12px 0 0;
     font-size: 1.2rem;
     background: var(--color8);
+    border: none;
     color: #fff;
     cursor: pointer;
     transition: all 0.2s;
-    font-variation-settings: "wght" 700;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
 
-    &:hover{
+    &:hover {
         background: var(--color10);
     }
 }
@@ -174,7 +180,7 @@
     }
 }
 
-.line{
+.line {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,41 +189,42 @@
     margin: 26px;
     user-select: none;
 
-    hr{
+    hr {
         width: 128px;
+        border: 1px solid;
         color: var(--color6);
     }
 }
 
-.options{
+.options {
     text-align: center;
     user-select: none;
     margin-bottom: 6px;
 
-    &:last-child{
+    &:last-child {
         margin: 0;
     }
 
-    p{
+    p {
         color: var(--color2);
         font-size: 14px;
     }
-    
-    a{
+
+    a {
         color: var(--color4);
         font-size: 14px;
     }
 }
 
-.socialLoginButtons{
+.socialLoginButtons {
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
 }
 
-.socialLoginButton{
+.socialLoginButton {
     width: 280px;
-    font-variation-settings: "wght" 500;
+    font-weight: 500;
     margin: auto;
     margin-bottom: 1rem;
     height: 48px;
@@ -243,22 +250,21 @@
         animation: rotation 1s linear infinite;
     }
 
-    &:last-child{
+    &:last-child {
         margin-bottom: 0;
     }
 
-    .bxl{
+    .bxl {
         font-size: 28px;
     }
 }
 
-@media screen and (min-width: 120px) and (max-width: 480px){
-
-    .sForm{
+@media screen and (min-width: 120px) and (max-width: 480px) {
+    .sForm {
         padding: 4rem 0;
     }
 
-    .signup{
+    .signup {
         width: 100%;
     }
 }

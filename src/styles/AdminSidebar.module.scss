@@ -1,4 +1,4 @@
-.menuList{
+.menuList {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -10,10 +10,10 @@
     z-index: 90;
     padding-top: 90px;
 
-    span{
+    span {
         color: var(--color1);
         font-size: 18px;
-        font-variation-settings: "wght" 400;
+        font-weight: 400;
         margin: 0 auto 18px;
         background: var(--color7);
         width: 100%;
@@ -23,32 +23,32 @@
         justify-content: center;
         user-select: none;
     }
-  
-        a{
-            width: 100%;
-            font-size: 18px;
-            font-variation-settings: "wght" 500;
-            color: var(--color2);
-            transition: all 0.2s;
-            padding: 12px 28px;
 
-            &:hover{
-                background: #99999922;
-                color: var(--color1);
-            }
+    a {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color2);
+        transition: all 0.2s;
+        padding: 12px 28px;
+
+        &:hover {
+            background: #99999922;
+            color: var(--color1);
+        }
     }
 }
 
-.mobileMenuList{
+.mobileMenuList {
     display: none;
 }
 
-@media screen and (min-width: 120px) and (max-width: 1024px){
-    .menuList{
+@media screen and (min-width: 120px) and (max-width: 1024px) {
+    .menuList {
         display: none;
     }
 
-    .mobileMenuList{
+    .mobileMenuList {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -64,27 +64,27 @@
         z-index: 70;
         padding: 0 8px;
 
-        hr{
+        hr {
             transform: rotate(90deg);
             width: 32px;
             color: var(--color7);
         }
-      
-            a{
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                font-size: 16px;
-                font-variation-settings: "wght" 500;
-                color: var(--color2);
-                transition: all 0.2s;
-                padding: 6px 0;
-                border-radius: 0.7rem;
-    
-                &:hover{
-                    background: #99999922;
-                    color: var(--color1);
-                }
+
+        a {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--color2);
+            transition: all 0.2s;
+            padding: 6px 0;
+            border-radius: 0.7rem;
+
+            &:hover {
+                background: #99999922;
+                color: var(--color1);
+            }
         }
     }
 }

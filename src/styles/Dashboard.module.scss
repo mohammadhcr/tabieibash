@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: start;
     justify-content: center;
@@ -10,24 +10,24 @@
     user-select: none;
 }
 
-.commentInput{
+.commentInput {
     width: 100%;
     margin: 36px auto 0;
 
-    .cBezar{
+    .cBezar {
         color: var(--color1);
-        font-variation-settings: "wght" 700;
+        font-weight: 700;
         font-size: 28px;
         margin-bottom: 24px;
     }
 
-    label{
+    label {
         color: var(--color2);
         font-size: 20px;
-        font-variation-settings: "wght" 300;
+        font-weight: 300;
     }
 
-    .input{
+    .input {
         background: var(--color6);
         width: 100%;
         margin: 6px 0 18px;
@@ -39,49 +39,49 @@
         font-size: 20px;
         color: var(--color1);
 
-        &:hover{
+        &:hover {
             border: 2px solid var(--color7);
         }
 
-        &::placeholder{
+        &::placeholder {
             font-size: 22px;
         }
-}
+    }
 
-    .slugInput{
+    .slugInput {
         direction: ltr;
     }
 
-    .authorInput{
+    .authorInput {
         direction: ltr;
         color: var(--color3);
     }
 
-    .textInput{
-            background: var(--color6);
-            width: 100%;
-            margin-top: 12px;
-            min-height: 280px;
-            max-height: 280px;
-            height: 280px;
-            border: 2px solid var(--color6);
-            outline: none;
-            border-radius: 14px;
-            padding: 0.5rem;
-            font-size: 20px;
-            color: var(--color1);
+    .textInput {
+        background: var(--color6);
+        width: 100%;
+        margin-top: 12px;
+        min-height: 280px;
+        max-height: 280px;
+        height: 280px;
+        border: 2px solid var(--color6);
+        outline: none;
+        border-radius: 14px;
+        padding: 0.5rem;
+        font-size: 20px;
+        color: var(--color1);
 
-            &:hover{
-                border: 2px solid var(--color7);
-            }
+        &:hover {
+            border: 2px solid var(--color7);
+        }
 
-            &::placeholder{
-                font-size: 22px;
-                color: var(--color2);
-            }
+        &::placeholder {
+            font-size: 22px;
+            color: var(--color2);
+        }
     }
 
-    .fileInput{
+    .fileInput {
         background: var(--color6);
         direction: ltr;
         width: 100%;
@@ -95,13 +95,13 @@
         color: var(--color2);
         cursor: pointer;
 
-            &:hover{
-                border: 2px solid var(--color7);
-            }
+        &:hover {
+            border: 2px solid var(--color7);
+        }
     }
 }
 
-.submit{
+.submit {
     max-width: 520px;
     width: 100%;
     height: 58px;
@@ -111,18 +111,18 @@
     color: #fff;
     cursor: pointer;
     transition: all 0.2s;
-    font-variation-settings: "wght" 700;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 8px;
     justify-content: center;
     border-radius: 16px;
 
-    svg{
+    svg {
         font-size: 20px;
     }
 
-    .btnLoader{
+    .btnLoader {
         width: 28px;
         height: 28px;
         border: 2px solid #fff;
@@ -132,7 +132,7 @@
         animation: rotation 1s linear infinite;
     }
 
-    &:hover{
+    &:hover {
         background: var(--color10);
     }
 }
@@ -146,22 +146,22 @@
     }
 }
 
-@media screen and (min-width: 641px) and (max-width: 1024px){
-    .wrapper{
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .wrapper {
         padding: 3rem 36px;
         width: 100%;
     }
 }
-    
-@media screen and (min-width: 481px) and (max-width: 640px){
-    .wrapper{
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+    .wrapper {
         padding: 3rem 32px;
         width: 100%;
     }
 }
-    
-@media screen and (min-width: 120px) and (max-width: 480px){
-    .wrapper{
+
+@media screen and (min-width: 120px) and (max-width: 480px) {
+    .wrapper {
         padding: 4rem 16px;
         width: 100%;
     }
