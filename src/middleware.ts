@@ -20,7 +20,7 @@ export default clerkMiddleware(async (auth, req) => {
     }
     if (
         isAdminRoute(req) &&
-        // @ts-expect-error
+        // @ts-expect-error any
         authPromise.sessionClaims?.metadata?.role<Roles> !== "admin"
     ) {
         return NextResponse.redirect(new URL("/login", req.url));
