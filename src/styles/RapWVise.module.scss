@@ -210,172 +210,7 @@
     }
 }
 
-@media screen and (min-width: 120px) and (max-width: 480px) {
-    .landingFirstBox {
-        padding: 8rem 18px 4rem;
-
-        .title {
-            h1 {
-                font-size: 38px;
-            }
-
-            p {
-                font-size: 14px;
-                font-weight: 500;
-            }
-        }
-    }
-
-    .landingBox {
-        width: 100%;
-        flex-direction: column-reverse;
-        gap: 16px;
-        padding: 4rem 18px;
-
-        .title {
-            align-items: center;
-            width: 100%;
-
-            h2 {
-                font-size: 44px;
-            }
-
-            p {
-                font-size: 14px;
-                text-align: center;
-            }
-        }
-
-        .icon {
-            width: 100%;
-            justify-content: center;
-
-            span {
-                padding: 18px;
-                font-size: 48px;
-                border-radius: 12px;
-            }
-        }
-    }
-
-    .landingBoxodd {
-        width: 100%;
-        flex-direction: column;
-        gap: 16px;
-        padding: 4rem 18px;
-        border-top: 2px solid var(--color6);
-        border-bottom: 2px solid var(--color6);
-
-        .title {
-            align-items: center;
-            width: 100%;
-
-            h2 {
-                font-size: 44px;
-            }
-
-            p {
-                font-size: 14px;
-                text-align: center;
-            }
-        }
-
-        .icon {
-            width: 100%;
-            justify-content: center;
-
-            span {
-                padding: 18px;
-                font-size: 48px;
-                border-radius: 12px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 780px) {
-    .landingFirstBox {
-        padding: 8rem 18px 4rem;
-
-        .title {
-            h1 {
-                font-size: 52px;
-            }
-
-            p {
-                font-size: 18px;
-            }
-        }
-    }
-
-    .landingBox {
-        width: 100%;
-        flex-direction: column-reverse;
-        gap: 16px;
-        padding: 4rem 42px;
-
-        .title {
-            align-items: center;
-            width: 100%;
-
-            h2 {
-                font-size: 44px;
-            }
-
-            p {
-                font-size: 16px;
-                text-align: center;
-            }
-        }
-
-        .icon {
-            width: 100%;
-            justify-content: center;
-
-            span {
-                padding: 18px;
-                font-size: 48px;
-                border-radius: 12px;
-            }
-        }
-    }
-
-    .landingBoxodd {
-        width: 100%;
-        flex-direction: column;
-        gap: 16px;
-        padding: 4rem 42px;
-        border-top: 2px solid var(--color6);
-        border-bottom: 2px solid var(--color6);
-
-        .title {
-            align-items: center;
-            width: 100%;
-
-            h2 {
-                font-size: 44px;
-            }
-
-            p {
-                font-size: 16px;
-                text-align: center;
-            }
-        }
-
-        .icon {
-            width: 100%;
-            justify-content: center;
-
-            span {
-                padding: 18px;
-                font-size: 48px;
-                border-radius: 12px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 781px) and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
     .landingFirstBox {
         .title {
             h1 {
@@ -446,6 +281,77 @@
                 padding: 18px;
                 font-size: 48px;
                 border-radius: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .landingFirstBox {
+        padding: 8rem 18px 4rem;
+
+        .title {
+            h1 {
+                font-size: 52px;
+            }
+        }
+    }
+
+    .landingBox {
+        padding: 4rem 42px;
+
+        .title {
+            h2 {
+                font-size: 44px;
+            }
+        }
+    }
+
+    .landingBoxodd {
+        padding: 4rem 42px;
+        border-top: 2px solid var(--color6);
+        border-bottom: 2px solid var(--color6);
+
+        .title {
+            h2 {
+                font-size: 44px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .landingFirstBox {
+        .title {
+            h1 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .landingBox {
+        padding: 4rem 18px;
+
+        .title {
+            p {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    }
+
+    .landingBoxodd {
+        padding: 4rem 18px;
+
+        .title {
+            p {
+                font-size: 14px;
+                text-align: center;
             }
         }
     }

@@ -150,28 +150,22 @@
     }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1600px) {
+@media screen and (max-width: 1600px) {
     .wrapper {
         padding: 4rem 4rem 0;
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
     .wrapper {
         padding: 4rem 3rem 0;
     }
 }
 
-@media screen and (min-width: 781px) and (max-width: 1024px) {
-    .wrapper {
-        padding: 4rem 2rem 0;
-    }
-}
-
-@media screen and (min-width: 641px) and (max-width: 780px) {
+@media screen and (max-width: 1024px) {
     .wrapper {
         flex-direction: column;
-        padding: 4rem 4rem;
+        padding: 4rem 2rem 0;
     }
 
     .artwork {
@@ -181,6 +175,12 @@
 
     .section {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .wrapper {
+        padding: 4rem 4rem;
     }
 
     .album {
@@ -199,50 +199,23 @@
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 640px) {
+@media screen and (max-width: 640px) {
     .wrapper {
-        flex-direction: column;
         padding: 4rem 3rem;
     }
 
     .artwork {
-        width: 100%;
         padding: 3rem 0 2rem;
-    }
-
-    .section {
-        width: 100%;
-    }
-
-    .album {
-        font-size: 2.5rem;
-    }
-
-    .artist {
-        font-size: 1.5rem;
-        padding: 1rem 0;
-    }
-
-    .description {
-        font-size: 1rem;
-        margin: 1rem 0;
-        padding: 1rem 0;
     }
 }
 
-@media screen and (min-width: 120px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .wrapper {
-        flex-direction: column;
         padding: 4rem 1rem 6rem;
     }
 
     .artwork {
-        width: 100%;
         padding: 2rem 0 1rem;
-    }
-
-    .section {
-        width: 100%;
     }
 
     .album {
@@ -252,12 +225,6 @@
     .artist {
         font-size: 22px;
         padding: 14px 0 10px;
-    }
-
-    .description {
-        font-size: 1rem;
-        margin: 1rem 0;
-        padding: 1rem 0;
     }
 
     .info {

@@ -254,43 +254,13 @@
     }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1600px) {
+@media screen and (max-width: 1600px) {
     .header {
         padding: 0 3rem;
     }
-
-    .iosMenu {
-        display: none;
-
-        a {
-            display: none;
-
-            .iosIcon {
-                display: none;
-            }
-        }
-    }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
-    .header {
-        padding: 0 3rem;
-    }
-
-    .iosMenu {
-        display: none;
-
-        a {
-            display: none;
-
-            .iosIcon {
-                display: none;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 781px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .header {
         padding: 0 2rem;
     }
@@ -315,125 +285,17 @@
     .rightSide .userAccount .signupBtn {
         display: none;
     }
-
-    .iosMenu {
-        display: none;
-
-        a {
-            display: none;
-
-            .iosIcon {
-                display: none;
-            }
-        }
-    }
 }
 
-@media screen and (min-width: 641px) and (max-width: 780px) {
-    .header {
-        padding: 0 2rem;
-    }
-
-    .menuClose {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 80;
-        background: rgba(0, 0, 0, 40%);
-    }
-
-    .hamburgerMenu {
-        display: block;
-    }
-
-    .menuList {
-        display: flex;
-    }
-
-    .nav,
-    .rightSide .userAccount .signupBtn {
-        display: none;
-    }
-
-    .iosMenu {
-        display: none;
-
-        a {
-            display: none;
-
-            .iosIcon {
-                display: none;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 640px) {
-    .header {
-        padding: 0 2rem;
-    }
-
-    .menuClose {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 80;
-        background: rgba(0, 0, 0, 40%);
-    }
-
-    .hamburgerMenu {
-        display: block;
-    }
-
-    .menuList {
-        display: flex;
-    }
-
-    .nav,
-    .rightSide .userAccount .signupBtn {
-        display: none;
-    }
-
-    .iosMenu {
-        display: none;
-
-        a {
-            display: none;
-
-            .iosIcon {
-                display: none;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 120px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .header {
         padding: 0 20px;
-    }
-
-    .menuClose {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 80;
-        background: rgba(0, 0, 0, 40%);
-    }
-
-    .hamburgerMenu {
-        display: block;
-    }
-
-    .menuList {
-        display: flex;
     }
 
     .rightSide .userAccount {
         gap: 0;
     }
 
-    .nav,
-    .rightSide .userAccount .signupBtn,
     .rightSide .userAccount .loginBtn,
     .rightSide .userAccount .profileBtn,
     .rightSide .userAccount .profileImage {

@@ -34,31 +34,25 @@
     gap: 36px;
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
     .itemContainer {
         padding: 10rem 0 4rem;
     }
 }
 
-@media screen and (min-width: 781px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .itemContainer {
         padding: 8rem 3rem 4rem;
     }
 }
 
-@media screen and (min-width: 641px) and (max-width: 780px) {
-    .itemContainer {
-        padding: 8rem 3rem 4rem;
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 640px) {
+@media screen and (max-width: 640px) {
     .itemContainer {
         padding: 8rem 2rem 4rem;
     }
 }
 
-@media screen and (min-width: 120px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .itemContainer {
         padding: 8rem 20px 4rem;
 

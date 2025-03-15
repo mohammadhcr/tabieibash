@@ -390,19 +390,14 @@
     }
 }
 
-@media screen and (min-width: 781px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .wrapper {
         padding: 6rem 36px;
         width: 100%;
     }
 }
 
-@media screen and (min-width: 641px) and (max-width: 780px) {
-    .wrapper {
-        padding: 6rem 36px;
-        width: 100%;
-    }
-
+@media screen and (max-width: 780px) {
     .artwork {
         width: 70%;
     }
@@ -416,10 +411,9 @@
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 640px) {
+@media screen and (max-width: 640px) {
     .wrapper {
         padding: 6rem 32px;
-        width: 100%;
     }
 
     .description {
@@ -429,33 +423,17 @@
     .artwork {
         width: 80%;
     }
-
-    .info {
-        width: 100%;
-    }
-
-    .album {
-        font-size: 36px;
-    }
 }
 
-@media screen and (min-width: 120px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .wrapper {
         padding: 6rem 16px;
         width: 100%;
     }
 
-    .description {
-        margin: 1rem 0;
-    }
-
     .artwork {
         width: 90%;
         margin-bottom: 1rem;
-    }
-
-    .info {
-        width: 100%;
     }
 
     .post {

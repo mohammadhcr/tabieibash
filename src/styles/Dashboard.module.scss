@@ -146,23 +146,21 @@
     }
 }
 
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .wrapper {
         padding: 3rem 36px;
         width: 100%;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 640px) {
+@media screen and (max-width: 640px) {
     .wrapper {
         padding: 3rem 32px;
-        width: 100%;
     }
 }
 
-@media screen and (min-width: 120px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .wrapper {
         padding: 4rem 16px;
-        width: 100%;
     }
 }
