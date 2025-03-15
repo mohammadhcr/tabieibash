@@ -305,8 +305,6 @@
         background: var(--color6);
         width: 100%;
         margin-top: 12px;
-        min-height: 280px;
-        max-height: 280px;
         height: 280px;
         border: 2px solid var(--color6);
         outline: none;
@@ -314,6 +312,7 @@
         padding: 0.5rem;
         font-size: 20px;
         color: var(--color1);
+        resize: none;
 
         &:hover {
             border: 2px solid var(--color7);

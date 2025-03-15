@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    padding: 3rem 0;
+    padding: 4rem 0 2rem;
     justify-content: center;
     align-items: center;
     background: var(--color5);
@@ -120,7 +120,8 @@
     }
 }
 
-.errMsg {
+.errMsg,
+.errMsgCode {
     font-size: 12px;
     text-align: center;
     height: 26px;
@@ -132,12 +133,6 @@
 
 .errMsgCode {
     font-size: 18px;
-    text-align: center;
-    height: 26px;
-    user-select: none;
-    color: #ff3e3e;
-    direction: ltr;
-    font-weight: 300;
 }
 
 .submitB button {
@@ -190,7 +185,7 @@
     user-select: none;
 
     hr {
-        width: 128px;
+        width: 100px;
         border: 1px solid;
         color: var(--color6);
     }
@@ -199,7 +194,7 @@
 .options {
     text-align: center;
     user-select: none;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 
     &:last-child {
         margin: 0;
@@ -213,6 +208,12 @@
     a {
         color: var(--color4);
         font-size: 14px;
+        padding-bottom: 1px;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid var(--color11);
+        }
     }
 }
 
@@ -238,6 +239,11 @@
     align-items: center;
     background: var(--color6);
     color: var(--color1);
+    border: 2px solid var(--color6);
+
+    &:hover {
+        border: 2px solid var(--color7);
+    }
 
     .btnLoader {
         margin-right: 4px;
@@ -260,10 +266,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    .sForm {
-        padding: 4rem 0;
-    }
-
     .signup {
         width: 100%;
     }
