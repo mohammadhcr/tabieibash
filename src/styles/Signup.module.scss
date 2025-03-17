@@ -185,7 +185,7 @@
     user-select: none;
 
     hr {
-        width: 100px;
+        width: 28%;
         border: 1px solid;
         color: var(--color6);
     }
@@ -266,6 +266,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .sForm {
+        padding: 4rem 0;
+    }
     .signup {
         width: 100%;
     }

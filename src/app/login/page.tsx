@@ -110,109 +110,92 @@ const Login = () => {
     } = styles;
 
     return (
-        <Suspense fallback={<Loading />}>
-            <form className={sForm}>
-                <div className={signup}>
-                    <div className={title}>
-                        <Image src={logo} alt='Logo' />
-                        <h1>خوش برگشتی!</h1>
-                        <p>
-                            برای استفاده از خدمات وب‌سایت، نیازه که وارد اکانتت
-                            شی...
-                        </p>
-                    </div>
-                    <div className={inputs}>
-                        <div className={input}>
-                            <span className={placeholder}>ایمیل:</span>
-                            <div>
-                                <MdOutlineAlternateEmail className={bxl} />
-                                <input
-                                    type='text'
-                                    name='email'
-                                    value={identifier}
-                                    onChange={(e) =>
-                                        setIdentifier(e.target.value)
-                                    }
-                                />
-                            </div>
-                        </div>
-                        <div className={input}>
-                            <span className={placeholder}>رمز عبور:</span>
-                            <div>
-                                <FaLock className={bxl} />
-                                <input
-                                    type={showPassword ? "text" : "password"}
-                                    value={password}
-                                    name='password'
-                                    onChange={(e) =>
-                                        setPassword(e.target.value)
-                                    }
-                                />
-                                <FaEye
-                                    className={`${bxlp} ${showPassword ? `${bxlpActive}` : ""}`}
-                                    onClick={() =>
-                                        setshowPassword(!showPassword)
-                                    }
-                                />
-                            </div>
+        <form className={sForm}>
+            <div className={signup}>
+                <div className={title}>
+                    <Image src={logo} alt='Logo' />
+                    <h1>خوش برگشتی!</h1>
+                    <p>
+                        برای استفاده از خدمات وب‌سایت، نیازه که وارد اکانتت
+                        شی...
+                    </p>
+                </div>
+                <div className={inputs}>
+                    <div className={input}>
+                        <span className={placeholder}>ایمیل:</span>
+                        <div>
+                            <MdOutlineAlternateEmail className={bxl} />
+                            <input
+                                type='text'
+                                name='email'
+                                value={identifier}
+                                onChange={(e) => setIdentifier(e.target.value)}
+                            />
                         </div>
                     </div>
-                    <span className={errMsg}>{error && error}</span>
-                    <div className={submitB}>
-                        <button onClick={submit} type='submit'>
-                            {btnLoad ? (
-                                <span className={btnLoader}></span>
-                            ) : (
-                                "ورود به حساب کاربری"
-                            )}
-                        </button>
-                    </div>
-                    <div className={line}>
-                        <hr />
-                        روش‌های دیگر
-                        <hr />
-                    </div>
-                    <div className={socialLoginButtons}>
-                        <button
-                            onClick={googleLogin}
-                            className={socialLoginButton}
-                        >
-                            <FcGoogle className={bxl} />
-                            {btnGoogle ? (
-                                <span className={btnLoader}></span>
-                            ) : (
-                                "ورود با گوگل"
-                            )}
-                        </button>
-                        <button
-                            onClick={gitHubLogin}
-                            className={socialLoginButton}
-                        >
-                            <SiGithub className={bxl} />
-                            {btnGitHub ? (
-                                <span className={btnLoader}></span>
-                            ) : (
-                                "ورود با گیت‌هاب"
-                            )}
-                        </button>
-                    </div>
-                    <div className={options}>
-                        <p>
-                            عضوی از ما نیستی؟{" "}
-                            <Link href='/signup'>ثبت نام کن</Link>
-                        </p>
-                    </div>
-                    <div className={options}>
-                        <p>
-                            نیاز به کمک دارم!{" "}
-                            <Link href='/forgot-password'>
-                                رمزم رو فراموش کردم
-                            </Link>
-                        </p>
+                    <div className={input}>
+                        <span className={placeholder}>رمز عبور:</span>
+                        <div>
+                            <FaLock className={bxl} />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                value={password}
+                                name='password'
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            <FaEye
+                                className={`${bxlp} ${showPassword ? `${bxlpActive}` : ""}`}
+                                onClick={() => setshowPassword(!showPassword)}
+                            />
+                        </div>
                     </div>
                 </div>
-            </form>
-        </Suspense>
+                <span className={errMsg}>{error && error}</span>
+                <div className={submitB}>
+                    <button onClick={submit} type='submit'>
+                        {btnLoad ? (
+                            <span className={btnLoader}></span>
+                        ) : (
+                            "ورود به حساب کاربری"
+                        )}
+                    </button>
+                </div>
+                <div className={line}>
+                    <hr />
+                    روش‌های دیگر
+                    <hr />
+                </div>
+                <div className={socialLoginButtons}>
+                    <button onClick={googleLogin} className={socialLoginButton}>
+                        <FcGoogle className={bxl} />
+                        {btnGoogle ? (
+                            <span className={btnLoader}></span>
+                        ) : (
+                            "ورود با گوگل"
+                        )}
+                    </button>
+                    <button onClick={gitHubLogin} className={socialLoginButton}>
+                        <SiGithub className={bxl} />
+                        {btnGitHub ? (
+                            <span className={btnLoader}></span>
+                        ) : (
+                            "ورود با گیت‌هاب"
+                        )}
+                    </button>
+                </div>
+                <div className={options}>
+                    <p>
+                        عضوی از ما نیستی؟ <Link href='/signup'>ثبت نام کن</Link>
+                    </p>
+                </div>
+                <div className={options}>
+                    <p>
+                        نیاز به کمک دارم!{" "}
+                        <Link href='/forgot-password'>رمزم رو فراموش کردم</Link>
+                    </p>
+                </div>
+            </div>
+        </form>
     );
 };
 

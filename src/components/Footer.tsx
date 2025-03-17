@@ -13,6 +13,7 @@ const Footer = () => {
         logoAndTitle,
         biography,
         usefulLinks,
+        usefulLink,
         linksList,
         copyrightContainer,
         copyright,
@@ -38,35 +39,35 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className={usefulLinks}>
-                    <div>
+                    <div className={usefulLink}>
                         <h3 className={usefulTitle}>
                             <span className={underline}>لینک‌های</span> کاربردی
                         </h3>
                         <ul className={linksList}>
-                            <li>لینک ۱</li>
-                            <li>لینک ۲</li>
-                            <li>لینک ۳</li>
-                            <li>لینک ۴</li>
-                            <li>لینک ۵</li>
+                            <li>صفحه‌اصلی</li>
+                            <li>فروشگاه</li>
+                            <li>بـلاگ</li>
+                            <li>آلبوم‌ها</li>
+                            <li>درباره ما</li>
                         </ul>
                     </div>
-                    <div>
+                    <div className={usefulLink}>
                         <h3 className={usefulTitle}>
                             <span className={underline}>عناوین</span> غیرمفید
                         </h3>
                         <ul className={linksList}>
-                            <li>لینک ۱</li>
-                            <li>لینک ۲</li>
-                            <li>لینک ۳</li>
-                            <li>لینک ۴</li>
-                            <li>لینک ۵</li>
+                            <li>فروشگاه</li>
+                            <li>بـلاگ</li>
+                            <li>صفحه‌اصلی</li>
+                            <li>آلبوم‌ها</li>
+                            <li>درباره ما</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className={copyrightContainer}>
                 <span className={copyright}>
-                    <span>کپی‌رایت ۱۴۰۴، تمامی حقوق محفوظ است</span>
+                    <span>کپی‌رایت ۱۴۰۴ - تمامی حقوق محفوظ است</span>
                     <hr />
                     <span>
                         ساخته‌شده با <FcLike /> توسط «محمد بخشی»
