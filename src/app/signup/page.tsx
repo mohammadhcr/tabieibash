@@ -11,7 +11,7 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import logo from "../../../public/logo.png";
 import Image from "next/image";
 import { useSignUp } from "@clerk/nextjs";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import Loading from "@/app/loading";
 
 const Signup = () => {
